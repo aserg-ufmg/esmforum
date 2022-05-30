@@ -4,7 +4,9 @@ Sistema de demonstração do livro [Engenharia de Software Moderna](https://engs
 
 Do ponto de vista funcional, o sistema é um fórum simples de perguntas e respostas. Por exemplo, similar ao Stack Overflow, mas, claro, com menos funcionalidades.
 
-Do ponto de vista tecnológico, o sistema é implementado em TypeScript, usando Node.js e React.
+Do ponto de vista tecnológico, o sistema é implementado em TypeScript, usando Node.js, React e SQLite.
+
+Informações para instalação e configuração do sistema, podem ser encontradas aqui.
 
 ## Executando o Sistema
 

@@ -29,6 +29,10 @@ Sendo um fórum de perguntas e respostas, as histórias de usuário -- que fazem
 
 Neste momento, apenas o primeiro sprint foi concluído e implementado. Seguem as histórias implementadas neste primeiro sprint -- ou seja, as histórias que fazem parte do **backlog do sprint**:
 
+* xx
+* xx
+* xx
+
 Ou seja, o código contido neste repositório, corresponde à implementação das histórias acima.
 
 ## Arquitetura

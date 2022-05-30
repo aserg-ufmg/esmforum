@@ -10,32 +10,26 @@ Do ponto de vista tecnológico, o sistema é implementado em TypeScript, usando 
 
 Informações para instalação e configuração do sistema, podem ser encontradas [aqui](https://github.com/aserg-ufmg/esmforum/blob/main/install-info.md).
 
-## Executando o Sistema
+## Histórias de Usuário
 
-Primeiro, clone o repositório para sua máquina local:
+Sendo um fórum de perguntas e respostas, as histórias de usuário -- que fazem parte do **backlog do produto** -- podem ser as seguintes:
 
-``` git clone https://github.com/aserg-ufmg/esmforum.git```
+* Como usuário, eu gostaria de criar uma pergunta
+* Como usuário, eu gostaria de responder uma pergunta
+* Como usuário, eu gostaria de editar uma das minhas perguntas ou respostas
+* Como usuário, eu gostaria de deletar uma das minhas perguntas ou respostas
+* Como usuário, eu gostaria de favoritar uma pergunta ou resposta
+* Como usuário, eu gostaria de me cadastrar no sistema
+* Como usuário, eu gostaria de adicionar tags nas minhas perguntas
+* Como usuário, eu gostaria de remover tags das minhas perguntas
+* Como usuário, eu gostaria de pesquisar por perguntas ou respostas
 
-Em seguida, verifique se já possui instaladas as seguintes dependências (pule caso já tenha instalado):
+* Como administrador, eu gostaria de editar ou remover perguntas ou respostas de qualquer usuário
+* Como administrador, eu gostaria de adicionar ou remover tags de qualquer pergunta ou resposta
 
-- Nodejs: Instale a versão correspondente ao seu SO em [nodejs.org](https://nodejs.org/).
-- Yarn:  ``` npm install --global yarn ```
+Neste momento, apenas o primeiro sprint foi concluído e implementado. Seguem as histórias implementadas neste primeiro sprint -- ou seja, as histórias que fazem parte do **backlog do sprint**:
 
-Para executar o backend:
-
-```
-yarn
-yarn dev
-```
-Caso alguma dependencia não tenha sido instalada ao rodar o comando anterior, execute "yarn add <dependencia> -D", exemplo: ``` yarn add ts-node-dev -D ```
-
-Para executar o frontend:
-
-```
-cd frontend
-npm install
-npm start
-```
+Ou seja, o código contido neste repositório, corresponde à implementação das histórias acima.
 
 ## Arquitetura
 

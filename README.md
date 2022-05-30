@@ -1,11 +1,18 @@
 # ESM Fórum
-Sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info).
 
-O objetivo é permitir que o aluno tenha um primeiro contato com os conceitos estudados no livro e tecnologias normalmente utilizadas em sistemas Web, como TypeScript, Node.js, REST API e React.
+Sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). O objetivo é permitir que o aluno tenha um primeiro contato prático com os conceitos estudados no livro
+
+Do ponto de vista funcional, o sistema é um fórum simples de perguntas e respostas. Por exemplo, similar ao Stack Overflow, mas, claro, com menos funcionalidades.
+
+Do ponto de vista tecnológico, o sistema é implementado em TypeScript, usando Node.js e React.
 
 ## Executando o Sistema
 
-Instalações necessárias (pule caso já tenha instalado):
+Primeiro, clone o repositório para sua máquina local:
+
+``` git clone https://github.com/aserg-ufmg/esmforum.git```
+
+Em seguida, verifique se já possui instaladas as seguintes dependências (pule caso já tenha instalado):
 
 - Nodejs: Instale a versão correspondente ao seu SO em [nodejs.org](https://nodejs.org/).
 - Yarn:  ``` npm install --global yarn ```

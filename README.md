@@ -35,6 +35,13 @@ Neste momento, apenas o primeiro sprint foi concluído e implementado. Seguem as
 
 Ou seja, o código contido neste repositório, corresponde à implementação das histórias acima.
 
+No backlog do sprint, para cada história também existe uma lista de tarefas (que são necessárias para implementar a história). Por exemplo, as tarefas associadas à história xx são as seguintes:
+
+* xx
+* xx
+* xx
+
+
 ## Arquitetura
 
 Frontend:

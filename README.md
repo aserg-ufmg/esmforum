@@ -1,12 +1,14 @@
 # ESM Fórum
 
-Sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). O objetivo é permitir que o aluno tenha um primeiro contato prático com os conceitos estudados no livro
+Sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). O objetivo é permitir que o aluno tenha um primeiro contato prático com os conceitos estudados no livro.
 
-Do ponto de vista funcional, o sistema é um fórum simples de perguntas e respostas. Por exemplo, similar ao Stack Overflow, mas, claro, com menos funcionalidades.
+Do ponto de vista funcional, o sistema é um fórum simples de perguntas e respostas, conforme ilustrado a seguir:
+
+Screenshot
 
 Do ponto de vista tecnológico, o sistema é implementado em TypeScript, usando Node.js, React e SQLite.
 
-Informações para instalação e configuração do sistema, podem ser encontradas aqui.
+Informações para instalação e configuração do sistema, podem ser encontradas [aqui](https://github.com/aserg-ufmg/esmforum/blob/main/install-info.md).
 
 ## Executando o Sistema
 

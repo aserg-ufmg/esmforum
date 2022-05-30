@@ -12,7 +12,7 @@ Informações para instalação e configuração do sistema, podem ser encontrad
 
 ## Histórias de Usuário
 
-Sendo um fórum de perguntas e respostas, as histórias de usuário -- que fazem parte do **backlog do produto** -- podem ser as seguintes:
+As histórias de usuário do nosso sistema de demonstração -- que fazem parte do **backlog do produto** -- são as seguintes:
 
 * Como usuário, eu gostaria de criar uma pergunta
 * Como usuário, eu gostaria de responder uma pergunta

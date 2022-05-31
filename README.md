@@ -4,7 +4,9 @@ O **ESM Fórum** é um sistema de demonstração do livro [Engenharia de Softwar
 
 Do ponto de seus requisitos funcionais, o sistema é um fórum simples de perguntas e respostas, conforme ilustrado a seguir:
 
-Screenshot
+<p align="center">
+    <img width="70%" src="[https://user-images.githubusercontent.com/57276191/171207621-b9d7b6a5-cfbd-4742-889f-660b1e75f547.png]" />
+</p>
 
 Do ponto de vista tecnológico, o sistema é implementado em TypeScript, usando Node.js, React e SQLite.
 
@@ -29,17 +31,18 @@ As histórias de usuário do nosso sistema de demonstração -- que fazem parte 
 
 Neste momento, apenas o primeiro sprint foi concluído e implementado. Seguem as histórias implementadas neste primeiro sprint -- ou seja, as histórias que fazem parte do **backlog do sprint**:
 
-* xx
-* xx
-* xx
+* Como usuário, eu gostaria de criar uma pergunta
+* Como usuário, eu gostaria de responder uma pergunta
+* Como usuário, eu gostaria de editar uma das minhas perguntas ou respostas
+* Como usuário, eu gostaria de deletar uma das minhas perguntas ou respostas
 
 Ou seja, o código contido neste repositório, corresponde à implementação das histórias acima.
 
-No backlog do sprint, para cada história também existe uma lista de tarefas (que são necessárias para implementar a história). Por exemplo, as tarefas associadas à história xx são as seguintes:
+No backlog do sprint, para cada história também existe uma lista de tarefas (que são necessárias para implementar a história). Por exemplo, as tarefas associadas à história "Como usuário, eu gostaria de criar uma pergunta" são as seguintes:
 
-* xx
-* xx
-* xx
+* Criar uma tabela para comentários
+* Desenvolver um formulário para inserir nova pergunta
+* Criar conexão entre o formulário e a tabela de comentários
 
 
 ## Arquitetura

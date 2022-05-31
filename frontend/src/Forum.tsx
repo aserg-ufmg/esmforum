@@ -121,8 +121,8 @@ const Forum = ( {commentsUrl= '', currentUserid = 1}) => {
         <text className="comments-title-text-a">ESM</text><text className="comments-title-text-b">FORUM</text>
       </h3>
       <div className="comment-formarea">
-        <div className="comment-form-title">Please Write a new Topic:</div>
-        <Form submitLabel="Write" handleSubmit={addComment} handleCancel={undefined} />
+        <div className="comment-form-title">Please post a new topic:</div>
+        <Form submitLabel="Post" handleSubmit={addComment} handleCancel={undefined} />
       </div>
       <div className="comments-container">
         {questions.map((question: Comment) => (

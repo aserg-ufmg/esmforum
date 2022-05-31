@@ -5,7 +5,7 @@ O **ESM Fórum** é um sistema de demonstração do livro [Engenharia de Softwar
 Do ponto de seus requisitos funcionais, o sistema é um fórum simples de perguntas e respostas, conforme ilustrado a seguir:
 
 <p align="center">
-    <img width="70%" src="[https://user-images.githubusercontent.com/57276191/171207621-b9d7b6a5-cfbd-4742-889f-660b1e75f547.png]" />
+    <img width="70%" src="https://user-images.githubusercontent.com/57276191/171216634-072dbf3c-4740-479f-a757-8d0ec28c68b7.png" />
 </p>
 
 Do ponto de vista tecnológico, o sistema é implementado em TypeScript, usando Node.js, React e SQLite.

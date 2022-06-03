@@ -14,7 +14,7 @@ Informações para instalação e execução podem ser encontradas [aqui](https:
 
 ## Histórias de Usuário
 
-### Backlog do Produto
+#### Backlog do Produto
 
 As histórias de usuário do nosso sistema -- que fazem parte do **backlog do produto** -- são as seguintes:
 
@@ -30,7 +30,7 @@ As histórias de usuário do nosso sistema -- que fazem parte do **backlog do pr
 * Como administrador, eu gostaria de editar ou remover perguntas ou respostas de qualquer usuário
 * Como administrador, eu gostaria de adicionar ou remover tags de qualquer pergunta ou resposta
 
-## Backlog do Sprint
+#### Backlog do Sprint
 
 Neste momento, apenas o primeiro sprint foi concluído e implementado. As histórias implementadas neste primeiro sprint -- ou seja, as histórias que fizeram parte do **backlog do sprint** -- foram as seguintes:
 

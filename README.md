@@ -39,7 +39,9 @@ Neste momento, apenas o primeiro sprint foi concluído e implementado. As histó
 * Como usuário, eu gostaria de editar uma das minhas perguntas ou respostas
 * Como usuário, eu gostaria de deletar uma das minhas perguntas ou respostas
 
-Veja que começamos o desenvolvimento por um conjunto de funcionalidades que julgamos mais importantes em um sistema como o ESM Fórum. Basicamente, neste primeiro sprint, o que implementamos foi um CRUD de perguntas e respostas. Para quem ainda não conhece, CRUD é uma sigla que significa Criar, Listar (Read), Atualizar (Update) e Deletar algum tipo de dado. Por isso, não nos preocupamos ainda com certas funcionalidades, como cadastro de usuários. Neste primeiro sprint, estamos assumindo que existe um único usuário no sistema, que já se encontra logado e habilitado a postar e responder perguntas. 
+Veja que começamos o desenvolvimento por um conjunto de funcionalidades que julgamos mais importantes em um sistema como o ESM Fórum. Basicamente, neste primeiro sprint, o que implementamos foi um CRUD de perguntas e respostas. Para quem ainda não conhece, CRUD é uma sigla que significa Criar, Listar (Read), Atualizar (Update) e Deletar algum tipo de dado. 
+
+Por outro lado, não nos preocupamos ainda com outras funcionalidades, como cadastro de usuários. Ou seja, nesse primeiro sprint, estamos assumindo que existe um único usuário no sistema, que já se encontra logado e habilitado a postar e responder perguntas. 
 
 ### Tarefas:
 

@@ -2,7 +2,7 @@
 
 O **ESM Fórum** é um sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). O objetivo é permitir que os alunos tenham um primeiro contato prático com os conceitos estudados no livro.
 
-Do ponto de seus requisitos funcionais, o sistema é um fórum simples de perguntas e respostas, conforme ilustrado a seguir:
+Do ponto de requisitos funcionais, o sistema é um fórum simples de perguntas e respostas, conforme ilustrado a seguir:
 
 <p align="center">
     <img width="70%" src="https://user-images.githubusercontent.com/57276191/171216634-072dbf3c-4740-479f-a757-8d0ec28c68b7.png" />
@@ -14,7 +14,9 @@ Informações para instalação e execução podem ser encontradas [aqui](https:
 
 ## Histórias de Usuário
 
-As histórias de usuário do nosso sistema de demonstração -- que fazem parte do **backlog do produto** -- são as seguintes:
+### Backlog do Produto
+
+As histórias de usuário do nosso sistema -- que fazem parte do **backlog do produto** -- são as seguintes:
 
 * Como usuário, eu gostaria de criar uma pergunta
 * Como usuário, eu gostaria de responder uma pergunta
@@ -25,25 +27,25 @@ As histórias de usuário do nosso sistema de demonstração -- que fazem parte 
 * Como usuário, eu gostaria de adicionar tags nas minhas perguntas
 * Como usuário, eu gostaria de remover tags das minhas perguntas
 * Como usuário, eu gostaria de pesquisar por perguntas ou respostas
-
 * Como administrador, eu gostaria de editar ou remover perguntas ou respostas de qualquer usuário
 * Como administrador, eu gostaria de adicionar ou remover tags de qualquer pergunta ou resposta
 
-Neste momento, apenas o primeiro sprint foi concluído e implementado. Seguem as histórias implementadas neste primeiro sprint -- ou seja, as histórias que fazem parte do **backlog do sprint**:
+## Backlog do Sprint
+
+Neste momento, apenas o primeiro sprint foi concluído e implementado. As histórias implementadas neste primeiro sprint -- ou seja, as histórias que fizeram parte do **backlog do sprint** -- foram as seguintes:
 
 * Como usuário, eu gostaria de criar uma pergunta
 * Como usuário, eu gostaria de responder uma pergunta
 * Como usuário, eu gostaria de editar uma das minhas perguntas ou respostas
 * Como usuário, eu gostaria de deletar uma das minhas perguntas ou respostas
 
-Ou seja, o código contido neste repositório, corresponde à implementação das histórias acima.
+### Tarefas:
 
-No backlog do sprint, para cada história também existe uma lista de tarefas (que são necessárias para implementar a história). Por exemplo, as tarefas associadas à história "Como usuário, eu gostaria de criar uma pergunta" são as seguintes:
+No backlog do sprint, para cada história também existe uma lista de tarefas, as quais são necessárias para implementar a história. Por exemplo, as tarefas associadas à história "Como usuário, eu gostaria de criar uma pergunta" são as seguintes:
 
-* Criar uma tabela para comentários
-* Desenvolver um formulário para inserir nova pergunta
+* Implementar uma tabela para comentários
+* Implementar um formulário para inserir nova pergunta
 * Criar conexão entre o formulário e a tabela de comentários
-
 
 ## Arquitetura
 

@@ -43,7 +43,7 @@ Veja que começamos o desenvolvimento por um conjunto de funcionalidades que jul
 
 Por outro lado, não nos preocupamos ainda com outras funcionalidades, como cadastro de usuários. Ou seja, nesse primeiro sprint, estamos assumindo que existe um único usuário no sistema, que já se encontra logado e habilitado a postar e responder perguntas. 
 
-### Tarefas:
+#### Tarefas
 
 No backlog do sprint, para cada história também existe uma lista de tarefas, as quais são necessárias para implementar a história. Por exemplo, as tarefas associadas à história "Como usuário, eu gostaria de criar uma pergunta" são as seguintes:
 

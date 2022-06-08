@@ -47,12 +47,18 @@ Por outro lado, não nos preocupamos ainda com outras funcionalidades, como cada
 
 No backlog do sprint, para cada história também existe uma lista de tarefas, as quais são necessárias para implementar a história. Por exemplo, as tarefas associadas à história "Como usuário, eu gostaria de criar uma pergunta" são as seguintes:
 
-* Implementar uma tabela para comentários
-* Implementar um formulário para inserir nova pergunta
-* Criar conexão entre o formulário e a tabela de comentários
+* Projetar o leiaute básico da interface (frontend);
+* Projetar e criar o banco de dados (backend)
+* Implementar rotas no backend para inserir, remover e recuperar perguntas e respostas (backend)
+* Implementar uma primeira versão da interface, apenas com criação de perguntas
+* Implementar uma segunda versão da interface, com as demais operações sobre perguntas e respostas
 
 ## Arquitetura
-
+```mermaid
+    flowchart LR
+        FRONTEND["FRONTEND \n (React)"] <--> BACKEND["BACKEND \n (TypeScript)"];
+        BACKEND["BACKEND \n (TypeScript)"] <--> DATABASE["DATABASE \n (SQLite)"];
+```
 Frontend:
 
 Interface em React para exibição de uma página inicial simplificada de um sistema de fórum. 
@@ -62,13 +68,43 @@ A estrutura contém:
  - ExhibitComment: esquema para exibição de árvore de comentários.
 
 Backend:
-
+```mermaid
+    flowchart LR
+        com --> cct;
+        ind --> com;
+        ind --> usr;
+        usr --> uct;
+        cct --> cmd;
+        uct --> umd;
+        cmd --> db;
+        umd --> db;
+        subgraph routes
+        direction TB
+        com["comment"];
+        ind["index"];
+        usr["user"];
+        end
+        subgraph controllers
+        direction TB
+        cct["commentControler"];
+        uct["userControler"];
+        end
+        subgraph models
+        direction TB
+        cmd["comment"];
+        umd["user"];
+        end
+        subgraph utils
+        direction TB
+        db["database"];
+        end
+```
 Web REST API, para definir a interação entre os diferentes componentes de software, utilzando Node.js e Express para envio de requerimentos HTTP como POST, GET, PUT e DELETE.
 A API conta com:
  - Models: modelos das tabelas comentário e usuário, definindo consultas para acesso e manipulação do banco de dados.
  - Controllers: manipula as solicitações e determina as ações sobre cada modelo.
  - Routes: estabelece as rotas para comunicação cliente-servidor.
- - Services: define chamadas para conexão e execução de consultas ao banco de dados.
+ - Utils: define chamadas para conexão e execução de consultas ao banco de dados.
 
 Banco de Dados:
 

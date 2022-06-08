@@ -2,7 +2,7 @@ import { Router } from 'express'
 import { commentController } from '../controllers/commentController'
 
 export const commentRouter = Router()
-commentRouter.get('/', commentController.listQuestions)
+commentRouter.get('/', commentController.listAllComments)
 commentRouter.post('/', commentController.insertQuestion)
 commentRouter.post('/:id', commentController.insertComment)
 commentRouter.get('/:id', commentController.listComments)

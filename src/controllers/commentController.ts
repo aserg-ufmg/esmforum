@@ -50,7 +50,7 @@ const updateComment = async (req: Request, res: Response) => {
     .catch(err => res.status(500).json(err.message))
 }
 
-const listQuestions = (req : Request, res: Response) => {
+const listAllComments = (req : Request, res: Response) => {
   return commentModel.listAllComments()
     .then((comment) => {
       if (comment) { return res.json(comment) } else { return res.sendStatus(404) }
@@ -81,7 +81,7 @@ const deleteComment = async (req: Request, res: Response) => {
 export const commentController = {
   insertComment,
   insertQuestion,
-  listQuestions,
+  listAllComments,
   listComments,
   deleteComment,
   updateComment

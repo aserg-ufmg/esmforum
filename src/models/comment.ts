@@ -1,4 +1,4 @@
-import { dbQuery, dbQueryFirst } from '../services/database'
+import { dbQuery, dbQueryFirst } from '../utils/database'
 
 export type Comment = {
   commentid: number

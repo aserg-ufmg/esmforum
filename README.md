@@ -52,7 +52,7 @@ No backlog do sprint, para cada história também existe uma lista de tarefas, a
 
 ## Arquitetura
 
-Na prróxima figura, mostramos uma representação em alto nível da arquitetura do sistema e das principais
+Na prróxima figura, mostramos um diagrama em alto nível da arquitetura do sistema e das principais
 tecnologias usadas na sua implementação:
 
 ```mermaid
@@ -97,13 +97,15 @@ Agora, mostramos com mais detalhes a arquitetura do backend.
         end
 ```
 
-De certo modo, esta arquitetura é similar a uma arquitetura MVC, conforme estudamos no Capítulio 7 do livro. 
+Essa arquitetura é similar a uma [arquitetura MVC](https://engsoftmoderna.info/cap7.html#arquitetura-mvc), conforme estudamos no Capítulo 7 do livro. 
 
-Especificamente no backend, a arquitetura é composta por 4 componentes principais: **rotas**, **controladores**, **modelos** e **banco de dados**. Iremos descrever cada um deles a seguir.
+No backend, a arquitetura possui quatro componentes principais: **rotas**, **controladores**, **modelos** e **banco de dados**. Iremos descrever cada um deles a seguir.
 
 ##### Rotas
 
-O backend é acessado por meio de uma interface REST, ou seja, por meio de URLs. Normalmente, no caso de REST, essas URLs são chamadas de **rotas**. Mostramos a seguir de uma rota para listar todos os comentários de uma pergunta (o código completo está [src/routes/comments.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/routes/comment.ts).
+O backend é acessado por meio de uma interface REST, isto é, de forma resumida, por meio de uma interface que permite acessar um sistema por meio de um conjunto de URLs. 
+
+No caso de REST, essas URLs são chamadas de **rotas**. Por exemplo, mostramos a seguir a declaração de uma rota para listar todos os comentários de uma pergunta (o código completo está [src/routes/comments.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/routes/comment.ts).
 
 ```
 import { Router } from 'express'
@@ -113,7 +115,7 @@ export const commentRouter = Router()
 commentRouter.get('/', commentController.listAllComments)
 ```
 
-Para implementar as rotas usamos uma biblioteca chamada Express.js. No código acima, primeiro importamos o componente ``Router`` dessa biblioteca e depois importamos todas as funções do componente ``commentController`` da nossa arquitetura, as quais estão implenmentadas em [commentController.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/controllers/commentController.ts). 
+Para implementar as rotas usamos uma biblioteca chamada [express.js](https://expressjs.com/). No código acima, primeiro importamos o componente ``Router`` dessa biblioteca e depois importamos todas as funções do componente ``commentController`` da nossa arquitetura, as quais estão implenmentadas em [commentController.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/controllers/commentController.ts). 
 
 Em seguida, criamos um roteador e criamos uma rota associando a URL "/comment" com a função ``CommentController.listAllComments``.
 

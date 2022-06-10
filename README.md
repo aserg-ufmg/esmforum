@@ -45,12 +45,16 @@ Por outro lado, não nos preocupamos ainda com outras funcionalidades, como cada
 No backlog do sprint, para cada história também existe uma lista de tarefas, as quais são necessárias para implementar a história. Por exemplo, as tarefas associadas à história "Como usuário, eu gostaria de criar uma pergunta" são as seguintes:
 
 * Projetar o leiaute básico da interface (frontend);
-* Projetar e criar o banco de dados (backend)
-* Implementar rotas no backend para inserir, remover e recuperar perguntas e respostas (backend)
-* Implementar uma primeira versão da interface, apenas com criação de perguntas
+* Projetar e criar as primeiras tabelas do banco de dados (backend)
+* Implementar rotas para inserir, remover e recuperar perguntas e respostas (backend)
+* Implementar uma primeira versão da interface, apenas com criação de perguntas (frontend)
 * Implementar uma segunda versão da interface, com as demais operações sobre perguntas e respostas
 
 ## Arquitetura
+
+Na prróxima figura mostramos uma representação em alto nível da arquitetura do sistema e das principais
+tecnologias usadas na sua implementação:
+
 ```mermaid
     flowchart LR
         FRONTEND["FRONTEND \n (React)"] <--> BACKEND["BACKEND \n (TypeScript)"];

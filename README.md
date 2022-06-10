@@ -113,8 +113,7 @@ export const commentRouter = Router()
 commentRouter.get('/', commentController.listAllComments)
 ```
 
-Para implementar as rotas usamos uma biblioteca chamada Express.js. No código acima, primeiro importamos essa biblioteca e depois importamos  
-todas as funções do componente Controller da nossa arquitetura, as quais estão implenmentadas no arquivo [commentController.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/controllers/commentController.ts). 
+Para implementar as rotas usamos uma biblioteca chamada Express.js. No código acima, primeiro importamos o componente ``Router`` dessa biblioteca e depois importamos todas as funções do componente ``commentController`` da nossa arquitetura, as quais estão implenmentadas em [commentController.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/controllers/commentController.ts). 
 
 Em seguida, criamos um roteador e criamos uma rota associando a URL "/comment" com a função ``CommentController.listAllComments``.
 

@@ -60,15 +60,11 @@ tecnologias usadas na sua implementação:
         FRONTEND["FRONTEND \n (React)"] <--> BACKEND["BACKEND \n (TypeScript)"];
         BACKEND["BACKEND \n (TypeScript)"] <--> DATABASE["DATABASE \n (SQLite)"];
 ```
-Frontend:
 
-Interface em React para exibição de uma página inicial simplificada de um sistema de fórum. 
-A estrutura contém: 
- - Forum: responsável pela organização geral e coleta de comentários da API.
- - Form: esquema para interação do usuário no fórum e chamada para alteração na base de dados.
- - ExhibitComment: esquema para exibição de árvore de comentários.
+### Backend
 
-Backend:
+Agora, mostramos com mais detalhes a arquitetura do backend.
+
 ```mermaid
     flowchart LR
         com --> cct;
@@ -111,4 +107,13 @@ Banco de Dados:
 
 Banco de dados simples compatível com SQLite com tabelas básicas para usuário e comentário estruturadas em um modelo relacional.
 
+
+
+Frontend:
+
+Interface em React para exibição de uma página inicial simplificada de um sistema de fórum. 
+A estrutura contém: 
+ - Forum: responsável pela organização geral e coleta de comentários da API.
+ - Form: esquema para interação do usuário no fórum e chamada para alteração na base de dados.
+ - ExhibitComment: esquema para exibição de árvore de comentários.
 

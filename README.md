@@ -16,32 +16,29 @@ Informações para instalação e execução podem ser encontradas [aqui](https:
 
 #### Backlog do Produto
 
-As histórias de usuário do nosso sistema -- que fazem parte do **backlog do produto** -- são as seguintes:
+As histórias de usuário do sistema -- que fazem parte do **backlog do produto** -- são as seguintes:
 
-* Como usuário, eu gostaria de criar uma pergunta
+* Como usuário, eu gostaria de criar, editar e deletar uma pergunta
 * Como usuário, eu gostaria de responder uma pergunta
-* Como usuário, eu gostaria de editar uma das minhas perguntas ou respostas
-* Como usuário, eu gostaria de deletar uma das minhas perguntas ou respostas
 * Como usuário, eu gostaria de favoritar uma pergunta ou resposta
 * Como usuário, eu gostaria de me cadastrar no sistema
-* Como usuário, eu gostaria de adicionar tags nas minhas perguntas
-* Como usuário, eu gostaria de remover tags das minhas perguntas
+* Como usuário, eu gostaria de adicionar tags nas minhas perguntas, bem como removê-las, se for preciso.
 * Como usuário, eu gostaria de pesquisar por perguntas ou respostas
 * Como administrador, eu gostaria de editar ou remover perguntas ou respostas de qualquer usuário
 * Como administrador, eu gostaria de adicionar ou remover tags de qualquer pergunta ou resposta
 
 #### Backlog do Sprint
 
-Neste momento, apenas o primeiro sprint foi concluído e implementado. As histórias implementadas neste primeiro sprint -- ou seja, as histórias que fizeram parte do **backlog do sprint** -- foram as seguintes:
+Até este momento, apenas o primeiro sprint foi concluído e implementado. As histórias implementadas neste sprint -- ou seja, as histórias que fizeram parte do **backlog do sprint** -- foram as seguintes:
 
 * Como usuário, eu gostaria de criar uma pergunta
 * Como usuário, eu gostaria de responder uma pergunta
 * Como usuário, eu gostaria de editar uma das minhas perguntas ou respostas
 * Como usuário, eu gostaria de deletar uma das minhas perguntas ou respostas
 
-Veja que começamos o desenvolvimento por um conjunto de funcionalidades que julgamos mais importantes em um sistema como o ESM Fórum. Basicamente, neste primeiro sprint, o que implementamos foi um CRUD de perguntas e respostas. Para quem ainda não conhece, CRUD é uma sigla que significa Criar, Listar (Read), Atualizar (Update) e Deletar algum tipo de dado. 
+Veja que começamos com um conjunto de funcionalidades mais importantes em um sistema como o ESM Fórum. Em outras palavras, neste primeiro sprint, o que implementamos foi um CRUD de perguntas e respostas. Para quem ainda não conhece, CRUD é uma sigla que significa Criar, Listar (Read), Atualizar (Update) e Deletar um tipo de dado. 
 
-Por outro lado, não nos preocupamos ainda com outras funcionalidades, como cadastro de usuários. Ou seja, nesse primeiro sprint, estamos assumindo que existe um único usuário no sistema, que já se encontra logado e habilitado a postar e responder perguntas. 
+Por outro lado, não nos preocupamos ainda com outras funcionalidades, como cadastro de usuários. Ou seja, neste primeiro sprint, estamos assumindo que existe um único usuário no sistema, que já se encontra logado e habilitado para postar e responder perguntas. 
 
 #### Tarefas
 

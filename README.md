@@ -61,7 +61,7 @@ tecnologias usadas na sua implementação:
         BACKEND["BACKEND \n (TypeScript)"] <--> DATABASE["DATABASE \n (SQLite)"];
 ```
 
-### Backend
+#### Backend
 
 Agora, mostramos com mais detalhes a arquitetura do backend.
 
@@ -96,6 +96,26 @@ Agora, mostramos com mais detalhes a arquitetura do backend.
         db["database"];
         end
 ```
+
+De certo modo, esta arquitetura é similar a uma arquitetura MVC, conforme estudamos no Capítulio 7 do livro. 
+
+Especificamente no backend, a arquitetura é composta por 4 componentes principais:
+
+##### Rotas
+
+O backend do sistema é acessado por meio de uma interface REST. As URLs oferecidas por essa interface são normalmente chamadas de **rotas**, conforme mostrado no trcho de código a seguir (que faz parte do arquivo [src/routes/comments.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/routes/comment.ts).
+
+```
+import { Router } from 'express'
+import { commentController } from '../controllers/commentController'
+
+export const commentRouter = Router()
+commentRouter.get('/', commentController.listAllComments)
+```
+
+Para implementar as rotas da interface REST usamos uma biblioteca de TypeScript chamada Express.js. No código acima, primeiro importamos essa biblioteca (linha xx) e dedepois importamos também 
+
+
 Web REST API, para definir a interação entre os diferentes componentes de software, utilzando Node.js e Express para envio de requerimentos HTTP como POST, GET, PUT e DELETE.
 A API conta com:
  - Models: modelos das tabelas comentário e usuário, definindo consultas para acesso e manipulação do banco de dados.

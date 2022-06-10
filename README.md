@@ -103,7 +103,7 @@ Especificamente no backend, a arquitetura é composta por 4 componentes principa
 
 ##### Rotas
 
-O backend é acessado por meio de uma interface REST, ou seja, por meio de URLs. Normalmente, no caso de interfaces REST, estas URLs são normalmente chamadas de **rotas**. Mostramos a seguir um exemplo de definição de uma rota (mais detalhes no arquivo [src/routes/comments.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/routes/comment.ts).
+O backend é acessado por meio de uma interface REST, ou seja, por meio de URLs. Normalmente, no caso de REST, essas URLs são chamadas de **rotas**. Mostramos a seguir de uma rota para listar todos os comentários de uma pergunta (o código completo está [src/routes/comments.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/routes/comment.ts).
 
 ```
 import { Router } from 'express'
@@ -113,11 +113,18 @@ export const commentRouter = Router()
 commentRouter.get('/', commentController.listAllComments)
 ```
 
-Para implementar as rotas usamos uma biblioteca chamada Express.js. No código acima, primeiro importamos essa biblioteca (linha xx) e depois importamos também 
-todas as funções da camada Controller, as quais estão implenmentadas no arquivo [commentController.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/controllers/commentController.ts). Em seguida, criamos um roteador (linha xx) e criamos uma rota associando a URL "\" com a função
-``listAllComments``, implementada em CommentController.
+Para implementar as rotas usamos uma biblioteca chamada Express.js. No código acima, primeiro importamos essa biblioteca e depois importamos  
+todas as funções do componente Controller da nossa arquitetura, as quais estão implenmentadas no arquivo [commentController.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/controllers/commentController.ts). 
 
-Ou seja, quando o frontend acessar a URL xx, a função ``listAllComments`` será automaticamente chamada.
+Em seguida, criamos um roteador e criamos uma rota associando a URL "/comment" com a função ``CommentController.listAllComments``.
+
+Ou seja, quando o frontend acessar a URL `\comment`, a função ``listAllComments`` será automaticamente chamada.
+
+#### Controladores
+
+#### Modelo
+
+#### Banco de Dados
 
 Web REST API, para definir a interação entre os diferentes componentes de software, utilzando Node.js e Express para envio de requerimentos HTTP como POST, GET, PUT e DELETE.
 A API conta com:

@@ -52,7 +52,7 @@ No backlog do sprint, para cada história também existe uma lista de tarefas, a
 
 ## Arquitetura
 
-Na prróxima figura mostramos uma representação em alto nível da arquitetura do sistema e das principais
+Na prróxima figura, mostramos uma representação em alto nível da arquitetura do sistema e das principais
 tecnologias usadas na sua implementação:
 
 ```mermaid
@@ -99,11 +99,11 @@ Agora, mostramos com mais detalhes a arquitetura do backend.
 
 De certo modo, esta arquitetura é similar a uma arquitetura MVC, conforme estudamos no Capítulio 7 do livro. 
 
-Especificamente no backend, a arquitetura é composta por 4 componentes principais:
+Especificamente no backend, a arquitetura é composta por 4 componentes principais: **rotas**, **controladores**, **modelos** e **banco de dados**. Iremos descrever cada um deles a seguir.
 
 ##### Rotas
 
-O backend do sistema é acessado por meio de uma interface REST. As URLs oferecidas por essa interface são normalmente chamadas de **rotas**, conforme mostrado no trcho de código a seguir (que faz parte do arquivo [src/routes/comments.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/routes/comment.ts).
+O backend é acessado por meio de uma interface REST, ou seja, por meio de URLs. Normalmente, no caso de interfaces REST, estas URLs são normalmente chamadas de **rotas**. Mostramos a seguir um exemplo de definição de uma rota (mais detalhes no arquivo [src/routes/comments.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/routes/comment.ts).
 
 ```
 import { Router } from 'express'
@@ -113,8 +113,11 @@ export const commentRouter = Router()
 commentRouter.get('/', commentController.listAllComments)
 ```
 
-Para implementar as rotas da interface REST usamos uma biblioteca de TypeScript chamada Express.js. No código acima, primeiro importamos essa biblioteca (linha xx) e dedepois importamos também 
+Para implementar as rotas usamos uma biblioteca chamada Express.js. No código acima, primeiro importamos essa biblioteca (linha xx) e depois importamos também 
+todas as funções da camada Controller, as quais estão implenmentadas no arquivo [commentController.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/controllers/commentController.ts). Em seguida, criamos um roteador (linha xx) e criamos uma rota associando a URL "\" com a função
+``listAllComments``, implementada em CommentController.
 
+Ou seja, quando o frontend acessar a URL xx, a função ``listAllComments`` será automaticamente chamada.
 
 Web REST API, para definir a interação entre os diferentes componentes de software, utilzando Node.js e Express para envio de requerimentos HTTP como POST, GET, PUT e DELETE.
 A API conta com:

@@ -93,13 +93,13 @@ Agora, mostramos com mais detalhes a arquitetura do backend.
 
 Essa arquitetura é similar a uma [arquitetura MVC](https://engsoftmoderna.info/cap7.html#arquitetura-mvc), conforme estudamos no Capítulo 7 do livro. 
 
-No backend, a arquitetura possui quatro componentes principais: **rotas**, **controladores**, **modelos** e **banco de dados**. Iremos descrever cada um deles a seguir.
+No backend, a arquitetura possui três componentes principais: **controladores**, **modelos** e **banco de dados**. Iremos descrever cada um deles a seguir.
 
-##### Rotas
+##### Controladores (e Rotas)
 
 O backend é acessado por meio de uma interface REST, isto é, de forma resumida, por meio de uma interface que permite acessar um sistema por meio de um conjunto de URLs. 
 
-No caso de REST, essas URLs são chamadas de **rotas**. Por exemplo, mostramos a seguir a declaração de uma rota para listar todos os comentários de uma pergunta (o código completo está [src/routes/comments.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/routes/comment.ts).
+No caso de REST, essas URLs são chamadas de **rotas**. Mostramos a seguir a declaração de uma rota que lista todos os comentários de uma pergunta (o código completo está [src/routes/comments.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/routes/comment.ts).
 
 ```
 import { Router } from 'express'
@@ -109,17 +109,14 @@ export const commentRouter = Router()
 commentRouter.get('/', commentController.listAllComments)
 ```
 
-Para implementar as rotas usamos uma biblioteca chamada [express.js](https://expressjs.com/). No código acima, primeiro importamos o componente ``Router`` dessa biblioteca e depois importamos todas as funções do componente ``commentController`` da nossa arquitetura, as quais estão implenmentadas em [commentController.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/controllers/commentController.ts). 
+Para implementar as rotas usamos uma biblioteca chamada [Express.js](https://expressjs.com/). No código acima, primeiro importamos o componente ``Router`` dessa biblioteca e depois importamos todas as funções do componente ``commentController``, as quais estão implementadas em [commentController.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/controllers/commentController.ts). 
 
-Em seguida, criamos um roteador e criamos uma rota associando a URL "/comment" com a função ``CommentController.listAllComments``.
-
-Ou seja, quando o frontend acessar a URL `\comment`, a função ``listAllComments`` será automaticamente chamada.
-
-#### Controladores
+Em seguida, criamos um roteador e uma rota, a qual associa a URL "/comment" com a função ``CommentController.listAllComments``. Ou seja, quando o frontend acessar a URL `\comment`, a função ``listAllComments`` será automaticamente chamada.
 
 #### Modelo
 
 #### Banco de Dados
+
 
 Web REST API, para definir a interação entre os diferentes componentes de software, utilzando Node.js e Express para envio de requerimentos HTTP como POST, GET, PUT e DELETE.
 A API conta com:

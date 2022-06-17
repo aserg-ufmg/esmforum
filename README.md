@@ -75,26 +75,20 @@ Agora, mostramos com mais detalhes a arquitetura do backend.
         uct --> umd;
         cmd --> db;
         umd --> db;
-        subgraph routes
+        subgraph Controllers
         direction TB
         com["comment"];
         ind["index"];
         usr["user"];
-        end
-        subgraph controllers
-        direction TB
         cct["commentControler"];
         uct["userControler"];
         end
-        subgraph models
+        subgraph Models
         direction TB
         cmd["comment"];
         umd["user"];
         end
-        subgraph utils
-        direction TB
-        db["database"];
-        end
+        db[("Database")];
 ```
 
 Essa arquitetura é similar a uma [arquitetura MVC](https://engsoftmoderna.info/cap7.html#arquitetura-mvc), conforme estudamos no Capítulo 7 do livro. 

@@ -29,7 +29,7 @@ const insertQuestion = (req: Request, res: Response) => {
     .catch(err => res.status(500).json(err.message))
 }
 
-const updateComment = async (req: Request, res: Response) => {
+const updateComment = (req: Request, res: Response) => {
   const id = parseInt(req.params.id)
 
   const com = req.body
@@ -37,9 +37,10 @@ const updateComment = async (req: Request, res: Response) => {
 
   if (!com.text) { return res.status(400).json('Add text to your comment') }
 
-  const commentSaved = await commentModel.getComment(id)
-  if (!commentSaved) { return res.sendStatus(404) }
-  if (commentSaved.userid !== com.userid) { return res.status(400).json('Invalid User') }
+  commentModel.getComment(id).then(comment => {
+    if (!comment) { return res.sendStatus(404) }
+    if (comment.userid !== com.userid) { return res.status(400).json('Invalid User') }
+  })
 
   const comment = req.body as Comment
   comment.commentid = id
@@ -67,11 +68,11 @@ const listComments = (req : Request, res: Response) => {
     .catch(err => res.status(500).json(err.message))
 }
 
-const deleteComment = async (req: Request, res: Response) => {
+const deleteComment = (req: Request, res: Response) => {
   const id = parseInt(req.params.id)
 
-  const commentSaved = await commentModel.getComment(id)
-  if (!commentSaved) { return res.sendStatus(404) }
+  commentModel.getComment(id).then(comment => { if (!comment) { return res.sendStatus(404) } }
+  )
 
   return commentModel.deleteComment(id)
     .then(comment => res.json(comment))

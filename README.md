@@ -115,8 +115,36 @@ Em seguida, criamos um roteador e uma rota, a qual associa a URL "/comment" com 
 
 #### Modelo
 
+As estruturas de comentário e usuário e as funções de acesso à base de dados utilizadas pelos controladores são definidas em ``src/models``.
+
+A seguir ilustramos a definição de um método que resgata todos os comentários da tabela comment na base de dados, implementado em [models/comment.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/models/comment.ts):
+
+```
+import { dbQuery, dbQueryFirst } from '../utils/database'
+
+export type Comment = {
+  commentid: number
+  parentid: number
+  userid: number
+  text: string
+  createdAt: Date
+}
+
+const listAllComments = async () => {
+  const out = await dbQuery('SELECT * FROM comment')
+  return out as Comment[]
+}
+```
+
+Ao implementar esses métodos de acesso à base de dados, utilizamos das funções dbQuery e dbQueryFirst, implementadas em [src/utils/database.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/utils/database.ts), para realizar consultas na base de dados.
+
+Criamos então o tipo de dados Comment para armazenar o objeto da tabela comment, e a função ``comment.listAllComments`` é implementada de forma a fazer a consulta ``SELECT * FROM comment`` na base e retornar as saídas da tabela em uma lista do tipo Comment.
+
 #### Banco de Dados
 
+O conexão e acesso ao banco de dados ``/src/forum.db`` são controlados através das funções ``utils/database/dbQuery`` e ``utils/database/dbQueryFirst``, utilizando da biblioteca [SQLite3](github.com/TryGhost/node-sqlite3) para realizar consultas na base de dados. 
+
+Brevemente, o esquema de tabelas em ``/src/forum.db`` corresponde a duas tabelas princiáis, comment e user, armazanendo somente informações mais básicas de cada estrutura lógica. A tabela comment é composta por campos númericos para identificador do comentário, comentário pai e usurário, e campos textuais para o texto e data de criação para um comentário; já a tabela user possui um campo numérico identificador, e campos textuais para o nome de usurário e email.
 
 Web REST API, para definir a interação entre os diferentes componentes de software, utilzando Node.js e Express para envio de requerimentos HTTP como POST, GET, PUT e DELETE.
 A API conta com:

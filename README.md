@@ -1,14 +1,14 @@
 # ESM Fórum
 
-O **ESM Fórum** é um sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). O objetivo é permitir que os alunos tenham um primeiro contato prático com os conceitos estudados no livro. Ou seja, trata-se de um objetivo didático e, por isso, não temos a intenção de colocar esse sistema em produção.
+O **ESM Fórum** é um sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). O objetivo é permitir que os alunos tenham um primeiro contato prático com os conceitos estudados no livro. Ou seja, trata-se de um **projeto com objetivo didático** e, por isso, **não temos a intenção de colocá-lo em produção**.
 
-Do ponto de requisitos funcionais, o sistema é um fórum simples de perguntas e respostas, conforme ilustrado a seguir:
+O sistema é um fórum simples de perguntas e respostas, conforme ilustrado a seguir:
 
 <p align="center">
     <img width="70%" src="https://user-images.githubusercontent.com/57276191/174321626-9f868081-7d53-43b5-8cd6-c7b681c15070.png" />
 </p>
 
-Do ponto de vista tecnológico, o sistema é implementado em TypeScript, usando Node.js, React e SQLite.
+Atualmente, ele é implementado em TypeScript, usando Node.js, React e SQLite.
 
 Informações para instalação e execução podem ser encontradas [aqui](https://github.com/aserg-ufmg/esmforum/blob/main/install-info.md).
 
@@ -97,7 +97,7 @@ No backend, a arquitetura possui três componentes principais: **controladores**
 
 ##### Controladores (e Rotas)
 
-O backend é acessado por meio de uma interface REST, isto é, de forma resumida, por meio de uma interface que permite acessar um sistema por meio de um conjunto de URLs. 
+O backend é acessado por meio de uma interface REST, isto é, de forma resumida, via uma interface formada por um conjunto de URLs. 
 
 No caso de REST, essas URLs são chamadas de **rotas**. Mostramos a seguir a declaração de uma rota que lista todos os comentários de uma pergunta (o código completo está [src/routes/comments.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/routes/comment.ts).
 
@@ -111,13 +111,13 @@ commentRouter.get('/', commentController.listAllComments)
 
 Para implementar as rotas usamos uma biblioteca chamada [Express.js](https://expressjs.com/). No código acima, primeiro importamos o componente ``Router`` dessa biblioteca e depois importamos todas as funções do componente ``commentController``, as quais estão implementadas em [commentController.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/controllers/commentController.ts). 
 
-Em seguida, criamos um roteador e uma rota, a qual associa a URL "/comment" com a função ``CommentController.listAllComments``. Ou seja, quando o frontend acessar a URL `\comment`, a função ``listAllComments`` será automaticamente chamada.
+Nas duas últimas linhas do código acima, criamos um roteador e uma rota, a qual associa a URL "/comment" com a função ``CommentController.listAllComments``. Ou seja, quando o frontend acessar a URL `/comment`, a função ``listAllComments`` será automaticamente chamada.
 
 #### Modelo
 
-As estruturas de comentário e usuário e as funções de acesso à base de dados utilizadas pelos controladores são definidas em ``src/models``.
+Como dissemos, atualmente o sistema é um CRUD simples de perguntas e respostas. As funções CRUD (cadastrar, listar, atualizar e deletar) são implementadas na camada de modelo.
 
-A seguir ilustramos a definição de um método que resgata todos os comentários da tabela comment na base de dados, implementado em [models/comment.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/models/comment.ts):
+Por exemplo, a seguir ilustramos a implementação do método `listAllComments` que lista todos os comentários já realizados (veja o código complemtado em [models/comment.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/models/comment.ts)):
 
 ```
 import { dbQuery, dbQueryFirst } from '../utils/database'
@@ -136,34 +136,13 @@ const listAllComments = async () => {
 }
 ```
 
-Ao implementar esses métodos de acesso à base de dados, utilizamos das funções dbQuery e dbQueryFirst, implementadas em [src/utils/database.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/utils/database.ts), para realizar consultas na base de dados.
+Veja que primeiro definimos um tipo `Comment`, com campos para armazena o ID do comentário e do seu pai, o ID do usuário que fez o comentário, o texto do comentário propriamente dito e a data de criação do comentário.
 
-Criamos então o tipo de dados Comment para armazenar o objeto da tabela comment, e a função ``comment.listAllComments`` é implementada de forma a fazer a consulta ``SELECT * FROM comment`` na base e retornar as saídas da tabela em uma lista do tipo Comment.
+A implementação do método `listAllComments`, mostrada nas linhas finais do código, é bastante simples. Ela chama a função auxiliar `dbQuery` (implementada em [src/utils/database.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/utils/database.ts)), para realizar um `select` simples no banco de dados. O resultado de `listAllComments` é uma lista de objetos do tipo `Comment`.
 
 #### Banco de Dados
 
 O conexão e acesso ao banco de dados ``/src/forum.db`` são controlados através das funções ``utils/database/dbQuery`` e ``utils/database/dbQueryFirst``, utilizando da biblioteca [SQLite3](github.com/TryGhost/node-sqlite3) para realizar consultas na base de dados. 
 
 Brevemente, o esquema de tabelas em ``/src/forum.db`` corresponde a duas tabelas princiáis, comment e user, armazanendo somente informações mais básicas de cada estrutura lógica. A tabela comment é composta por campos númericos para identificador do comentário, comentário pai e usurário, e campos textuais para o texto e data de criação para um comentário; já a tabela user possui um campo numérico identificador, e campos textuais para o nome de usurário e email.
-
-Web REST API, para definir a interação entre os diferentes componentes de software, utilzando Node.js e Express para envio de requerimentos HTTP como POST, GET, PUT e DELETE.
-A API conta com:
- - Models: modelos das tabelas comentário e usuário, definindo consultas para acesso e manipulação do banco de dados.
- - Controllers: manipula as solicitações e determina as ações sobre cada modelo.
- - Routes: estabelece as rotas para comunicação cliente-servidor.
- - Utils: define chamadas para conexão e execução de consultas ao banco de dados.
-
-Banco de Dados:
-
-Banco de dados simples compatível com SQLite com tabelas básicas para usuário e comentário estruturadas em um modelo relacional.
-
-
-
-Frontend:
-
-Interface em React para exibição de uma página inicial simplificada de um sistema de fórum. 
-A estrutura contém: 
- - Forum: responsável pela organização geral e coleta de comentários da API.
- - Form: esquema para interação do usuário no fórum e chamada para alteração na base de dados.
- - ExhibitComment: esquema para exibição de árvore de comentários.
 

@@ -140,9 +140,50 @@ Veja que primeiro definimos um tipo `Comment`, com campos para armazena o ID do 
 
 A implementação do método `listAllComments`, mostrada nas linhas finais do código, é bastante simples. Ela chama a função auxiliar `dbQuery` (implementada em [src/utils/database.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/utils/database.ts)), para realizar um `select` simples no banco de dados. O resultado de `listAllComments` é uma lista de objetos do tipo `Comment`.
 
+Além da função listAllComments, outras funções similares são implementadas na camada de Modelo da nossa arquitetura, incluindo funções como getComment, insertComment, updateComment, listComments e deleteComment.
+
 #### Banco de Dados
 
 O conexão e acesso ao banco de dados ``/src/forum.db`` são controlados através das funções ``utils/database/dbQuery`` e ``utils/database/dbQueryFirst``, utilizando da biblioteca [SQLite3](github.com/TryGhost/node-sqlite3) para realizar consultas na base de dados. 
 
-Brevemente, o esquema de tabelas em ``/src/forum.db`` corresponde a duas tabelas princiáis, comment e user, armazanendo somente informações mais básicas de cada estrutura lógica. A tabela comment é composta por campos númericos para identificador do comentário, comentário pai e usurário, e campos textuais para o texto e data de criação para um comentário; já a tabela user possui um campo numérico identificador, e campos textuais para o nome de usurário e email.
+Brevemente, o esquema de tabelas em ``/src/forum.db`` corresponde a duas tabelas princiais, comment e user, armazanendo somente informações mais básicas de cada estrutura lógica. A tabela comment é composta por campos númericos para identificador do comentário, comentário pai e usurário, e campos textuais para o texto e data de criação para um comentário; já a tabela user possui um campo numérico identificador, e campos textuais para o nome de usurário e email.
+
+Para fins de ilustrar a estrutura do banco de dados, mostramos a seguir o comando SQL para criação das tabelas e suas relações em um diagrama Entidade-Relacionamento:
+
+```
+CREATE TABLE "comment" (
+	"commentid"	INTEGER,
+	"parentid"	INTEGER,
+	"userid"	INTEGER,
+	"text"	TEXT,
+	"createdAt"	TEXT,
+	PRIMARY KEY("commentid" AUTOINCREMENT),
+	FOREIGN KEY("userid") REFERENCES "user"("userid") ON DELETE CASCADE
+)
+
+CREATE TABLE "user" (
+	"userid"	INTEGER,
+	"username"	TEXT,
+	"email"	TEXT,
+	PRIMARY KEY("userid" AUTOINCREMENT)
+)
+```
+
+```mermaid
+    erDiagram
+        user ||--o{ comment : commments
+        user {
+            int userid PK
+            string username
+            string text
+        }
+        comment{
+            int commentid PK
+            int parentid
+            int userid FK
+            string text
+            string createdAt
+        }
+```
+
 

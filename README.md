@@ -50,9 +50,9 @@ No backlog do sprint, para cada história também existe uma lista de tarefas, a
 * Implementar uma primeira versão da interface, apenas com criação de perguntas (frontend)
 * Implementar uma segunda versão da interface, com as demais operações sobre perguntas e respostas
 
-## Arquitetura
+## Visão Geral da Arquitetura
 
-Na prróxima figura, mostramos um diagrama em alto nível da arquitetura do sistema e das principais
+Na próxima figura, mostramos um diagrama em alto nível da arquitetura do sistema e das principais
 tecnologias usadas na sua implementação:
 
 ```mermaid
@@ -61,7 +61,7 @@ tecnologias usadas na sua implementação:
         BACKEND["BACKEND \n (TypeScript)"] <--> DATABASE["DATABASE \n (SQLite)"];
 ```
 
-#### Backend
+## Arquitetura do Backend
 
 Agora, mostramos com mais detalhes a arquitetura do backend.
 
@@ -95,7 +95,7 @@ Essa arquitetura é similar a uma [arquitetura MVC](https://engsoftmoderna.info/
 
 No backend, a arquitetura possui três componentes principais: **controladores**, **modelos** e **banco de dados**. Iremos descrever cada um deles a seguir.
 
-##### Controladores (e Rotas)
+### Controladores 
 
 O backend é acessado por meio de uma interface REST, isto é, de forma resumida, via uma interface formada por um conjunto de URLs. 
 
@@ -113,7 +113,7 @@ Para implementar as rotas usamos uma biblioteca chamada [Express.js](https://exp
 
 Nas duas últimas linhas do código acima, criamos um roteador e uma rota, a qual associa a URL "/comment" com a função ``CommentController.listAllComments``. Ou seja, quando o frontend acessar a URL `/comment`, a função ``listAllComments`` será automaticamente chamada.
 
-#### Modelo
+### Modelo
 
 Como dissemos, atualmente o sistema é um CRUD simples de perguntas e respostas. As funções CRUD (cadastrar, listar, atualizar e deletar) são implementadas na camada de modelo.
 
@@ -142,7 +142,7 @@ A implementação do método `listAllComments`, mostrada nas linhas finais do c�
 
 Além da função `listAllComments`, outras funções similares são implementadas na camada de Modelo da nossa arquitetura, incluindo funções como `getComment`, `insertComment`, `updateComment`, `listComments` e `deleteComment`. Veja o código delas em [models/comment.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/models/comment.ts).
 
-#### Banco de Dados
+### Banco de Dados
 
 A conexão e acesso ao banco de dados ``/src/forum.db`` são realizados por meio de duas funções da biblioteca [SQLite3](github.com/TryGhost/node-sqlite3):
 
@@ -189,4 +189,7 @@ A seguir, você pode conferir também o Diagrama Entidade-Relacionamento (DER) d
         }
 ```
 
+## Arquitetura do Frontend
+
+Todo.
 

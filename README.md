@@ -144,12 +144,7 @@ Além da função `listAllComments`, outras funções similares são implementad
 
 ### Banco de Dados
 
-A conexão e acesso ao banco de dados ``/src/forum.db`` são realizados por meio de duas funções da biblioteca [SQLite3](github.com/TryGhost/node-sqlite3):
-
-* ``utils/database/dbQuery``: [Daniel: acrescenta aqui uma breve explicação do que ela faz]
-* ``utils/database/dbQueryFirst``: [Daniel: acrescenta aqui uma breve explicação do que ela faz]
-
-Para explicar a estrutura do banco de dados, mostramos a seguir o comando SQL para criação das duas tabelas usadas no sistema (`comment` e `user`):
+Inicialmente, mostramos o comando SQL para criação das duas tabelas usadas no sistema (`comment` e `user`):
 
 ```
 CREATE TABLE "comment" (
@@ -170,7 +165,7 @@ CREATE TABLE "user" (
 )
 ```
 
-A seguir, você pode conferir também o Diagrama Entidade-Relacionamento (DER) do nosso banco de dados.
+Mostramos também o Diagrama Entidade-Relacionamento (DER) do nosso banco de dados.
 
 ```mermaid
     erDiagram
@@ -188,6 +183,11 @@ A seguir, você pode conferir também o Diagrama Entidade-Relacionamento (DER) d
             string createdAt
         }
 ```
+Fisicamente, o banco de dados fica armazenado no arquivo ``/src/forum.db``. Para acessá-lo, usamos duas funções da biblioteca [SQLite3](github.com/TryGhost/node-sqlite3):
+
+* ``utils/database/dbQuery``: [Daniel: acrescenta aqui uma breve explicação do que ela faz]
+* ``utils/database/dbQueryFirst``: [Daniel: acrescenta aqui uma breve explicação do que ela faz]
+
 
 ## Arquitetura do Frontend
 

@@ -188,6 +188,24 @@ Fisicamente, o banco de dados fica armazenado no arquivo ``/src/forum.db``. Para
 * ``utils/database/dbQuery``: função responsável por realizar conexão com o banco de dados e retornar lista de todos os items a partir de query de entrada.
 * ``utils/database/dbQueryFirst``: função que realiza conexão com o banco de dados e retorna primeiro item da lista retornada a partir de query de entrada.
 
+Para ilustração, portanto, do fluxo de execução dado o acesso do frontend à URL "/comment", temos o seguinte diagrama de sequência:
+
+```mermaid
+    sequenceDiagram
+        Controllers->>Controllers: commentController.listAllComments()
+        activate Controllers
+        Controllers->>Models: comment.listAllComments()
+        activate Models
+        Models->>DB: dbQuery()
+        activate DB
+        DB-->>Models: Comment[ ]
+        deactivate DB
+        Models-->>Controllers: Comment[ ]
+        deactivate Models
+	deactivate Controllers
+
+```	
+
 ## Arquitetura do Frontend
 
 Todo.

@@ -207,8 +207,6 @@ Fisicamente, o banco de dados fica armazenado no arquivo ``/src/forum.db``. Para
 * ``dbQuery(String query)``: conecta-se com o BD, executa a query informada como parâmetro e retorna uma lista com todos os resultados da query.
 * ``dbQueryFirst``: conecta-se com o BD, executa a query informada como parâmetro e retorna apenas o primeiro item da lista de resultados da query.
  
-Para ilustração, portanto, do fluxo de execução dado o acesso do frontend à URL "/comment", temos o seguinte diagrama de sequência:
-
 ## Arquitetura do Frontend
 
 Todo.

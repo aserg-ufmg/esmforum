@@ -204,9 +204,9 @@ Mostramos também o Diagrama Entidade-Relacionamento (DER) do nosso banco de dad
 ```
 Fisicamente, o banco de dados fica armazenado no arquivo ``/src/forum.db``. Para acessá-lo, usamos duas funções a partir da biblioteca [SQLite3](github.com/TryGhost/node-sqlite3):
 
-* ``utils/database/dbQuery``: função responsável por realizar conexão com o banco de dados e retornar lista de todos os items a partir de query de entrada.
-* ``utils/database/dbQueryFirst``: função que realiza conexão com o banco de dados e retorna primeiro item da lista retornada a partir de query de entrada.
-
+* ``utils/database/dbQuery(String query)``: conecta-se com o BD, executa a query informada como parâmetro e retorna uma lista com todos os resultados da query.
+* ``utils/database/dbQueryFirst``: conecta-se com o BD, executa a query informada como parâmetro e retorna apenas o primeiro item da lista de resultados da query.
+ 
 Para ilustração, portanto, do fluxo de execução dado o acesso do frontend à URL "/comment", temos o seguinte diagrama de sequência:
 
 ## Arquitetura do Frontend

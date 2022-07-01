@@ -50,7 +50,7 @@ No backlog do sprint, para cada história também existe uma lista de tarefas, a
 * Implementar uma primeira versão da interface, apenas com criação de perguntas (frontend)
 * Implementar uma segunda versão da interface, com as demais operações sobre perguntas e respostas
 
-## Visão Geral da Arquitetura
+## Arquitetura (Visão Geral)
 
 Na próxima figura, mostramos um diagrama em alto nível da arquitetura do sistema e das principais
 tecnologias usadas na sua implementação:
@@ -140,6 +140,25 @@ Veja que primeiro definimos um tipo `Comment`, com campos para armazena o ID do 
 
 A implementação do método `listAllComments`, mostrada nas linhas finais do código, é bastante simples. Ela chama a função auxiliar `dbQuery` (implementada em [src/utils/database.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/utils/database.ts)), para realizar um `select` simples no banco de dados. O resultado de `listAllComments` é uma lista de objetos do tipo `Comment`.
 
+O seguinte diagrama de sequência ilustra as chamadas de métodos descritas acima:
+
+```mermaid
+    sequenceDiagram
+        Controllers->>Controllers: commentController.listAllComments()
+        activate Controllers
+        Controllers->>Models: comment.listAllComments()
+        activate Models
+        Models->>DB: dbQuery()
+        activate DB
+        DB-->>Models: Comment[ ]
+        deactivate DB
+        Models-->>Controllers: Comment[ ]
+        deactivate Models
+	deactivate Controllers
+
+```	
+
+
 Além da função `listAllComments`, outras funções similares são implementadas na camada de Modelo da nossa arquitetura, incluindo funções como `getComment`, `insertComment`, `updateComment`, `listComments` e `deleteComment`. Veja o código delas em [models/comment.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/models/comment.ts).
 
 ### Banco de Dados
@@ -189,22 +208,6 @@ Fisicamente, o banco de dados fica armazenado no arquivo ``/src/forum.db``. Para
 * ``utils/database/dbQueryFirst``: função que realiza conexão com o banco de dados e retorna primeiro item da lista retornada a partir de query de entrada.
 
 Para ilustração, portanto, do fluxo de execução dado o acesso do frontend à URL "/comment", temos o seguinte diagrama de sequência:
-
-```mermaid
-    sequenceDiagram
-        Controllers->>Controllers: commentController.listAllComments()
-        activate Controllers
-        Controllers->>Models: comment.listAllComments()
-        activate Models
-        Models->>DB: dbQuery()
-        activate DB
-        DB-->>Models: Comment[ ]
-        deactivate DB
-        Models-->>Controllers: Comment[ ]
-        deactivate Models
-	deactivate Controllers
-
-```	
 
 ## Arquitetura do Frontend
 

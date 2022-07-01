@@ -183,11 +183,10 @@ Mostramos também o Diagrama Entidade-Relacionamento (DER) do nosso banco de dad
             string createdAt
         }
 ```
-Fisicamente, o banco de dados fica armazenado no arquivo ``/src/forum.db``. Para acessá-lo, usamos duas funções da biblioteca [SQLite3](github.com/TryGhost/node-sqlite3):
+Fisicamente, o banco de dados fica armazenado no arquivo ``/src/forum.db``. Para acessá-lo, usamos duas funções a partir da biblioteca [SQLite3](github.com/TryGhost/node-sqlite3):
 
-* ``utils/database/dbQuery``: [Daniel: acrescenta aqui uma breve explicação do que ela faz]
-* ``utils/database/dbQueryFirst``: [Daniel: acrescenta aqui uma breve explicação do que ela faz]
-
+* ``utils/database/dbQuery``: função responsável por realizar conexão com o banco de dados e retornar lista de todos os items a partir de query de entrada.
+* ``utils/database/dbQueryFirst``: função que realiza conexão com o banco de dados e retorna primeiro item da lista retornada a partir de query de entrada.
 
 ## Arquitetura do Frontend
 

@@ -144,7 +144,6 @@ O seguinte diagrama de sequência ilustra as chamadas de métodos descritas acim
 
 ```mermaid
     sequenceDiagram
-        Controllers->>Controllers: commentController.listAllComments()
         activate Controllers
         Controllers->>Models: comment.listAllComments()
         activate Models

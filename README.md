@@ -6,7 +6,7 @@ O **ESM Fórum** é um sistema de demonstração do livro [Engenharia de Softwar
 
 Ou seja, trata-se de um projeto com **objetivo didático** e, por isso, **não temos a intenção de colocá-lo em produção**. 
 
-Também não temos a intenção de implementar um sistema completo, com todas as funcionalidades de um sistema real.
+Também **não temos a intenção de implementar um sistema completo**, com todas as funcionalidades de um sistema real.
 
 ## Descrição do Sistema
 

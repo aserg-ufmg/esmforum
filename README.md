@@ -1,6 +1,12 @@
 # ESM Fórum
 
-O **ESM Fórum** é um sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). O objetivo é permitir que os alunos tenham um primeiro contato prático com os conceitos estudados no livro. Ou seja, trata-se de um projeto com **objetivo didático** e, por isso, **não temos a intenção de colocá-lo em produção**. Também não temos a intenção de implementar um sistema completo, com todas as funcionalidades de um sistema real.
+## Objetivo do Projeto
+
+O **ESM Fórum** é um sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). O objetivo é permitir que os alunos tenham um primeiro contato prático com os conceitos estudados no livro. Ou seja, trata-se de um projeto com **objetivo didático** e, por isso, **não temos a intenção de colocá-lo em produção**. 
+
+Também não temos a intenção de implementar um sistema completo, com todas as funcionalidades de um sistema real.
+
+## Descrição do Sistema.
 
 O sistema é um fórum simples de perguntas e respostas, conforme ilustrado a seguir:
 
@@ -10,7 +16,11 @@ O sistema é um fórum simples de perguntas e respostas, conforme ilustrado a se
 
 Atualmente, ele é implementado em TypeScript, usando Node.js, React e SQLite.
 
-Informações para instalação e execução podem ser encontradas [aqui](https://github.com/aserg-ufmg/esmforum/blob/main/install-info.md).
+## Documentação
+
+* [Instalação e Execução](https://github.com/aserg-ufmg/esmforum/blob/main/install-info.md)
+* [Histórias de Usuários](https://github.com/aserg-ufmg/esmforum/blob/main/historias-usuarioss.md)
+* [Arquitetura](https://github.com/aserg-ufmg/esmforum/blob/main/arquitetura.md)
 
 ## Histórias de Usuário
 

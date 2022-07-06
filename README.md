@@ -1,6 +1,6 @@
 # ESM Fórum
 
-O **ESM Fórum** é um sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). O objetivo é permitir que os alunos tenham um primeiro contato prático com os conceitos estudados no livro. Ou seja, trata-se de um projeto com **objetivo didático** e, por isso, **não temos a intenção de colocá-lo em produção**.
+O **ESM Fórum** é um sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). O objetivo é permitir que os alunos tenham um primeiro contato prático com os conceitos estudados no livro. Ou seja, trata-se de um projeto com **objetivo didático** e, por isso, **não temos a intenção de colocá-lo em produção**. Também não temos a intenção de implementar um sistema completo, com todas as funcionalidades de um sistema real.
 
 O sistema é um fórum simples de perguntas e respostas, conforme ilustrado a seguir:
 

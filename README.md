@@ -16,9 +16,9 @@ Atualmente, ele é implementado em TypeScript, usando Node.js, React e SQLite.
 
 ## Documentação
 
-* [Instalação](https://github.com/aserg-ufmg/esmforum/blob/main/install-info.md)
-* [Histórias de Usuários](https://github.com/aserg-ufmg/esmforum/blob/main/historias-usuarios.md)
-* [Arquitetura](https://github.com/aserg-ufmg/esmforum/blob/main/arquitetura.md)
+* [Instalação](https://github.com/aserg-ufmg/esmforum/blob/main/docs/install-info.md)
+* [Histórias de Usuários](https://github.com/aserg-ufmg/esmforum/blob/main/docs/historias-usuarios.md)
+* [Arquitetura](https://github.com/aserg-ufmg/esmforum/blob/main/docs/arquitetura.md)
 
 ## Créditos
 

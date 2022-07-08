@@ -158,5 +158,79 @@ Fisicamente, o banco de dados fica armazenado no arquivo ``/src/forum.db``. Para
  
 ## Arquitetura do Frontend
 
-Todo.
+
+A seguir, detalhamos a arquitetura do feontend.
+
+No frontend, a arquitetura corresponde a três integrantes:  fórum, formulário e comentários, descritos com mais detalhes  a seguir.
+
+### Fórum
+
+O frontend é estruturado a partir de uma interface em React, para exibição de uma página inicial simplificada de um sistema de fórum.
+
+Para construção da página, o arquivo [Forum.tsx](https://github.com/aserg-ufmg/esmforum/blob/main/frontend/src/Forum.tsx) é responsável por organizar a estrutura e determinar o fluxo de funcionamento da página.
+
+Mostramos a seguir como realizamos a conexão com o backend através da chamada da API.
+
+```
+import { useState, useEffect } from "react"
+import { Comment } from "../../src/models/comment"
+
+const [comments, setComments] = useState<any[]>([])
+useEffect(()=> {
+    const loadData = () => {
+        const requestOptions = {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' }
+        }
+        console.log(commentsUrl)
+        fetch(commentsUrl, requestOptions)
+        .then(response => response.json())
+        .then(data => setComments(
+        data.sort(
+            (a: Comment, b: Comment) =>
+            -(new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime())
+        )
+        ))
+    }
+    loadData()
+}, [commentsUrl])
+```
+Através dos métodos useEffect e useState de uma biblioteca [React](https://reactjs.org/), os comentários são acessados do banco de dados através da chamado do método GET na Url ``/api/comment/``, sendo armazenados em comments para uso na exibição de comentários.
+
+Em Forum.tsx ainda se acessa informações de usuários e define métodos como addComment, deleteComment e updateComment, para transmitir alterações nesses dados para o banco de dados, como ilustrado a seguir pelo método updateComment. 
+
+```
+const updateComment = (text: string, commentid: number) => {
+    const requestOptions = {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({'text': text, "userid": currentUserid})
+    }
+    fetch(commentsUrl+`/${commentid}`, requestOptions)
+      .then(response => response.json())
+      .then(comment => {
+        const updatedComments = comments.map((question: Comment) => {
+          if(question.commentid === commentid){
+            return { ...question, text:text}
+          }
+          return question
+        })
+        setComments(updatedComments)
+        setComment(null);
+      })
+  };
+```
+O método atulaiza um comentário a partir de seu commentid através da chamado do método PUT na Url ``/api/comment/commentid``, e atualizando o comentário também nos comentários salvos em comments, mantendo versão mais atual para a exibição os comentários.
+
+Por fim, ainda estrutura a disposição do formulário para inserção de perguntas e exibição dos comentários na página.
+
+### Formulário
+
+Estrutura de Formulário utilizada para operações como inserção ou alteração de comentários. 
+
+Essa estrutura é utilizada tanto em Forum.tsx quanto em ExhibitComment.tsx para inserção de questões, e em ExhibitComment.tsx para manipulação de comentários.
+
+### Exibição de Comentários
+
+Responsável por organizar e exibir uma árvore simples de comentários, a implementação em [ExhibitComment.tsx](https://github.com/aserg-ufmg/esmforum/blob/main/frontend/src/ExhibitComment.tsx) utiliza dos dados administrados em Forum.tsx para exibir os tópicos e comentários aninhados, para isso lidando com opções como exibir ou ocultar comentários, e inserir, alterar ou remover um comentário. 
 

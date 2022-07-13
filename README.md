@@ -20,6 +20,14 @@ Atualmente, ele é implementado em TypeScript, usando Node.js, React e SQLite.
 * [Histórias de Usuários](https://github.com/aserg-ufmg/esmforum/blob/main/docs/historias-usuarios.md)
 * [Arquitetura](https://github.com/aserg-ufmg/esmforum/blob/main/docs/arquitetura.md)
 
+## Como Contribuir?
+
+Você pode contribuir abrindo [issues](https://github.com/aserg-ufmg/esmforum/issues) (caso detecte algum bug ou tenha qualquer dúvida sobre o porjeto) ou abrindo [pull requests](https://github.com/aserg-ufmg/esmforum/pulls).
+
+Quais os tipos de contribuições são bem vindos? Principalmente, aquelas que corrijam bugs ou que tornem o sistema ou sua documentação mais clara e didática.
+
+Como dissemos antes, não temos interesse em adicionar novas funcionalidades no sistema, pois isso iria torná-la mais complexo e difícil de entender para um aluno iniciante em Engenharia de Software.
+
 ## Créditos
 
 Este sistema foi implementado por Daniel Ferreira, aluno de graduação em Ciência da Computação no DCC/UFMG, como parte de suas atividades como monitor dos curso de extensão em [Engenharia de Software Moderna](http://www.engsoftmoderna.dcc.ufmg.br) e [Teste de Software](http://www.testesoft.dcc.ufmg.br/).

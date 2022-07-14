@@ -22,7 +22,7 @@ Atualmente, ele é implementado em TypeScript, usando Node.js, React e SQLite.
 
 ## Como Contribuir?
 
-O ESM Forum é um projeto de código aberto. Você pode contribuir abrindo [issues](https://github.com/aserg-ufmg/esmforum/issues) (caso detecte algum bug ou tenha qualquer dúvida sobre o porjeto) ou abrindo [pull requests](https://github.com/aserg-ufmg/esmforum/pulls).
+O ESM Forum é um projeto de código aberto. Você pode contribuir abrindo [issues](https://github.com/aserg-ufmg/esmforum/issues) (caso detecte algum bug ou tenha qualquer dúvida sobre o projeto) ou abrindo [pull requests](https://github.com/aserg-ufmg/esmforum/pulls).
 
 Quais contribuições são bem vindas? Principalmente, aquelas que **corrijam bugs ou que tornem o código do sistema ou sua documentação mais claros e didáticos**.
 

@@ -1,7 +1,7 @@
 import { commentModel } from '../models/comment'
 import del from 'del'
 
-it('inserir e listar comentarios "Primeira Questão", "Segunda Questão', async () => {
+it('inserir, remover e listar comentarios "Primeira Questão", "Segunda Questão', async () => {
   const comment = { userid: 3, text: 'Primeira Questão', parentid: 0, commentid: 0, createdAt: new Date() }
   await commentModel.insertComment(comment, 0, './src/tests/test.db')
 

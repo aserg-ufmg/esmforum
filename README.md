@@ -26,7 +26,7 @@ O ESM Fórum é um projeto de código aberto. Você pode contribuir abrindo [iss
 
 Quais contribuições são bem vindas? Principalmente, aquelas que **corrijam bugs ou que tornem o código do sistema ou sua documentação mais claros e didáticos**.
 
-Como dissemos antes, **não temos interesse em adicionar novas funcionalidades** no sistema, pois isso acabaria por torná-lo mais complexo e difícil de entender para um aluno iniciante em Engenharia de Software.
+Importante: como dissemos antes, **não temos interesse em adicionar novas funcionalidades** no sistema, pois isso acabaria por torná-lo mais complexo e difícil de entender para um aluno iniciante em Engenharia de Software.
 
 ## Créditos
 

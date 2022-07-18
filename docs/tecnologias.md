@@ -18,13 +18,14 @@ Usamos também os seguintes sistemas e bibliotecas:
   * Node.js, um sistema que permite a execução de programas JavaScript fora de browsers.
   * Express.js, uma biblioteca para construção de aplicações Web em Node.js.
   * SQLite, um banco de dados relacional simples e implementado na forma de uma biblioteca.
+  * jest, para implementação de testes de unidade e de integração.
   
 * No frontend: 
   * React, um conhecido framework para construção de single page applications (SPAs).
 
 Tanto no back como no frontend, usamos o npm para gerenciamento e instalação de dependências externas. Ou seja, 
 as dependências, isto é, bibliotecas, frameworks, etc, usadas pelo ESM Forum são automaticamente baixadas e 
-instaladas pelo npm. Para ver as dependências do backend, veja o arquivo 
+instaladas pelo npm. Para ver as dependências do backend, abra o arquivo 
 [package.json](https://github.com/aserg-ufmg/esmforum/blob/main/package.json) 
 
 Porque escolheram esse stack de tecnologias? Porque ele é muito utilizado hoje em dia para desenvolvimento de novas aplicações, 

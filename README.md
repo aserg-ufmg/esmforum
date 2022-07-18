@@ -12,23 +12,10 @@ O sistema é um fórum simples de perguntas e respostas, conforme ilustrado a se
     <img width="70%" src="https://user-images.githubusercontent.com/57276191/174321626-9f868081-7d53-43b5-8cd6-c7b681c15070.png" />
 </p>
 
-## Tecnologias
-
-O ESM Forum é implementado em TypeScript, que é uma extensão de JavaScript com suporte a verificação estática de tipos. Isto é, em TypeScript, se quisermos podemos informar o tipo de variáveis, parâmetros, etc. Antes de serem executados, programas TypeScript são primeiro compilados (ou convertidos) para código JavaScript.
-
-Usamos também os seguintes sistemas e bibliotecas: 
-* No backend: 
-  * Node.js, um sistema de runtime para execução de programas JavaScript fora de browsers
-  * Express.js, uma biblioteca para construção de aplicações servidoras em Node.js
-  * SQLite, um banco de dados relacional simples, implementado na forma de uma biblioteca
-  
-* No frontend: 
-  * React, um conhecido framework para construção de web apps.
-
-Porque escolheram esse stack de tecnologias? Porque ele é muito utilizado hoje em dia para desenvolvimento de novas aplicações, principalmemte aquelas que lidam com informações e transações, como é o caso do ESM Forum.
 
 ## Documentação
 
+* [Tecnologias](https://github.com/aserg-ufmg/esmforum/blob/main/docs/tecnologias.md)
 * [Instalação e Execução](https://github.com/aserg-ufmg/esmforum/blob/main/docs/install-info.md)
 * [Histórias de Usuários](https://github.com/aserg-ufmg/esmforum/blob/main/docs/historias-usuarios.md)
 * [Arquitetura](https://github.com/aserg-ufmg/esmforum/blob/main/docs/arquitetura.md)

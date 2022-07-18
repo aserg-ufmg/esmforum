@@ -20,6 +20,7 @@ O sistema é um fórum simples de perguntas e respostas, conforme ilustrado a se
 * [Histórias de Usuários](https://github.com/aserg-ufmg/esmforum/blob/main/docs/historias-usuarios.md)
 * [Arquitetura](https://github.com/aserg-ufmg/esmforum/blob/main/docs/arquitetura.md)
 
+<!----
 ## Como Contribuir?
 
 O ESM Forum é um projeto de código aberto. Você pode contribuir abrindo [issues](https://github.com/aserg-ufmg/esmforum/issues) (caso detecte algum bug ou tenha qualquer dúvida sobre o projeto) ou abrindo [pull requests](https://github.com/aserg-ufmg/esmforum/pulls).
@@ -27,6 +28,7 @@ O ESM Forum é um projeto de código aberto. Você pode contribuir abrindo [issu
 Quais contribuições são bem vindas? Principalmente, aquelas que **corrijam bugs ou que tornem o código do sistema ou sua documentação mais claros e didáticos**.
 
 Importante: como dissemos antes, **não temos interesse em adicionar novas funcionalidades** no sistema, pois isso acabaria por torná-lo mais complexo e difícil de entender para um aluno iniciante em Engenharia de Software.
+--->
 
 ## Créditos
 

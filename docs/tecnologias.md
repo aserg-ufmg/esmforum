@@ -24,7 +24,8 @@ Usamos também os seguintes sistemas e bibliotecas:
 
 Tanto no back como no frontend, usamos o npm para gerenciamento e instalação de dependências externas. Ou seja, 
 as dependências, isto é, bibliotecas, frameworks, etc, usadas pelo ESM Forum são automaticamente baixadas e 
-instaladas pelo npm. Para ver as dependências do backend, veja o arquivo [package.json]() 
+instaladas pelo npm. Para ver as dependências do backend, veja o arquivo 
+[package.json](https://github.com/aserg-ufmg/esmforum/blob/main/package.json) 
 
 Porque escolheram esse stack de tecnologias? Porque ele é muito utilizado hoje em dia para desenvolvimento de novas aplicações, 
 principalmemte aquelas que lidam com informações e transações, como é o caso do ESM Forum.

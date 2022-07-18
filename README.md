@@ -14,8 +14,8 @@ O sistema é um fórum simples de perguntas e respostas, conforme ilustrado a se
 
 Atualmente, ele é implementado em TypeScript, usando:
 
-* No backend: Node.js, Express.jsSQLite.
-* No fronetd: React
+* No backend: Node.js, Express.js e SQLite
+* No frontend: React
 
 ## Documentação
 

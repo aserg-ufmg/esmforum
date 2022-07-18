@@ -14,8 +14,15 @@ O sistema é um fórum simples de perguntas e respostas, conforme ilustrado a se
 
 Atualmente, ele é implementado em TypeScript, usando:
 
-* No backend: Node.js, Express.js e SQLite
-* No frontend: React
+* No backend: 
+  * Node.js, um sistema de runtime para execução de programas JavaScript fora de browsers
+  * Express.js, uma biblioteca para construção de aplicações servidoras em Node.js
+  * SQLite, um banco de dados relacional simples, implementado na forma de uma biblioteca
+  
+* No frontend: 
+  * React, um conhecido framework para construção de web apps.
+
+Porque escolheram esse stack de tecnologias? Porque ele é muito utilizado hoje em dia para desenvolvimento de novas aplicações, principalmemte aquelas que lidam com informações e transações, como é o caso do ESM Forum.
 
 ## Documentação
 

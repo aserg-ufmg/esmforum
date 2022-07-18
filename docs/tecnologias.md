@@ -5,7 +5,7 @@
 ## Linguagem de Programação
 
 O ESM Forum é implementado em TypeScript, que é uma extensão de JavaScript com suporte a verificação estática de tipos. 
-Isto é, em TypeScript, se quisermos podemos informar o tipo de variáveis, parâmetros, etc. Antes de serem executados, 
+Isto é, em TypeScript, podemos informar o tipo de variáveis, parâmetros, etc. Antes de serem executados, 
 programas TypeScript são primeiro compilados (ou convertidos) para código JavaScript.
 
 ## Bibliotecas

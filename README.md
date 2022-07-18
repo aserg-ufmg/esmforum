@@ -12,8 +12,11 @@ O sistema é um fórum simples de perguntas e respostas, conforme ilustrado a se
     <img width="70%" src="https://user-images.githubusercontent.com/57276191/174321626-9f868081-7d53-43b5-8cd6-c7b681c15070.png" />
 </p>
 
-Atualmente, ele é implementado em TypeScript, usando:
+## Tecnologias
 
+O ESM Forum é implementado em TypeScript, que é uma extensão de JavaScript com suporte a verificação estática de tipos. Isto é, em TypeScript, se quisermos podemos informar o tipo de variáveis, parâmetros, etc. Antes de serem executados, programas TypeScript são primeiro compilados (ou convertidos) para código JavaScript.
+
+Usamos também os seguintes sistemas e bibliotecas: 
 * No backend: 
   * Node.js, um sistema de runtime para execução de programas JavaScript fora de browsers
   * Express.js, uma biblioteca para construção de aplicações servidoras em Node.js

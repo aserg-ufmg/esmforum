@@ -18,10 +18,10 @@ Usamos também os seguintes sistemas e bibliotecas:
   * Node.js, um sistema que permite a execução de programas JavaScript fora de browsers.
   * Express.js, uma biblioteca para construção de aplicações Web em Node.js.
   * SQLite, um banco de dados relacional simples e implementado na forma de uma biblioteca.
-  * jest, para implementação de testes de unidade e de integração.
+  * Jest, um framework para implementação de testes de unidade e de integração.
   
 * No frontend: 
-  * React, um conhecido framework para construção de single page applications (SPAs).
+  * React, uma biblioteca para construção de single page applications (SPAs).
 
 Tanto no back como no frontend, usamos o npm para gerenciamento e instalação de dependências externas. Ou seja, 
 as dependências, isto é, bibliotecas, frameworks, etc, usadas pelo ESM Forum são automaticamente baixadas e 

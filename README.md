@@ -1,6 +1,6 @@
-# ESM Fórum
+# ESM Forum
 
-O **ESM Fórum** é um sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). O objetivo é permitir que os alunos tenham um primeiro contato prático com os conceitos estudados no livro. Ou seja:
+O **ESM Forum** é um sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). O objetivo é permitir que os alunos tenham um primeiro contato prático com os conceitos estudados no livro. Ou seja:
 
 * Trata-se de um projeto com **objetivo didático** e, por isso, **não temos a intenção de colocá-lo em produção**. 
 
@@ -16,13 +16,13 @@ Atualmente, ele é implementado em TypeScript, usando Node.js, React e SQLite.
 
 ## Documentação
 
-* [Instalação](https://github.com/aserg-ufmg/esmforum/blob/main/docs/install-info.md)
+* [Instalação e Execução](https://github.com/aserg-ufmg/esmforum/blob/main/docs/install-info.md)
 * [Histórias de Usuários](https://github.com/aserg-ufmg/esmforum/blob/main/docs/historias-usuarios.md)
 * [Arquitetura](https://github.com/aserg-ufmg/esmforum/blob/main/docs/arquitetura.md)
 
 ## Como Contribuir?
 
-O ESM Fórum é um projeto de código aberto. Você pode contribuir abrindo [issues](https://github.com/aserg-ufmg/esmforum/issues) (caso detecte algum bug ou tenha qualquer dúvida sobre o projeto) ou abrindo [pull requests](https://github.com/aserg-ufmg/esmforum/pulls).
+O ESM Forum é um projeto de código aberto. Você pode contribuir abrindo [issues](https://github.com/aserg-ufmg/esmforum/issues) (caso detecte algum bug ou tenha qualquer dúvida sobre o projeto) ou abrindo [pull requests](https://github.com/aserg-ufmg/esmforum/pulls).
 
 Quais contribuições são bem vindas? Principalmente, aquelas que **corrijam bugs ou que tornem o código do sistema ou sua documentação mais claros e didáticos**.
 

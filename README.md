@@ -15,7 +15,7 @@ O sistema é um fórum simples de perguntas e respostas, conforme ilustrado a se
 
 ## Documentação
 
-* [Tecnologias](https://github.com/aserg-ufmg/esmforum/blob/main/docs/tecnologias.md)
+* [Tecnologias Adotadas](https://github.com/aserg-ufmg/esmforum/blob/main/docs/tecnologias.md)
 * [Instalação e Execução](https://github.com/aserg-ufmg/esmforum/blob/main/docs/install-info.md)
 * [Histórias de Usuários](https://github.com/aserg-ufmg/esmforum/blob/main/docs/historias-usuarios.md)
 * [Arquitetura](https://github.com/aserg-ufmg/esmforum/blob/main/docs/arquitetura.md)

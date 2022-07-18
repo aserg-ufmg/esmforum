@@ -13,7 +13,7 @@ programas TypeScript são primeiro compilados (ou convertidos) para código Java
 Usamos também os seguintes sistemas e bibliotecas: 
 
 * No backend: 
-  * Node.js, um sistema de runtime para execução de programas JavaScript fora de browsers.
+  * Node.js, um sistema que permite a execução de programas JavaScript fora de browsers.
   * Express.js, uma biblioteca para construção de serviços Web em Node.js.
   * SQLite, um banco de dados relacional simples, implementado na forma de uma biblioteca.
   

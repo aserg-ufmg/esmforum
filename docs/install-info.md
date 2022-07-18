@@ -1,4 +1,4 @@
-# ESM Fórum
+# ESM Forum
 
 ## Instruções para Instalação e Execução
 
@@ -28,3 +28,8 @@ npm install
 npm start
 ```
 
+## IDE
+
+Evidentemente, você pode usar qualquer IDE para entender e executar o código do sistema.
+
+Mas recomendamos usar uma IDE mais simples, como o Visual Studio Code. Neste caso, você primeiro deve importar o projeto (File -> Open Folder) e depois você pode abrir um terminal, no prório VS Code para digitar os comandos acima e executar tanto o backend como o frontend.

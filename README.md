@@ -12,7 +12,10 @@ O sistema é um fórum simples de perguntas e respostas, conforme ilustrado a se
     <img width="70%" src="https://user-images.githubusercontent.com/57276191/174321626-9f868081-7d53-43b5-8cd6-c7b681c15070.png" />
 </p>
 
-Atualmente, ele é implementado em TypeScript, usando Node.js, React e SQLite.
+Atualmente, ele é implementado em TypeScript, usando:
+
+* No backend: Node.js, Express.jsSQLite.
+* No fronetd: React
 
 ## Documentação
 

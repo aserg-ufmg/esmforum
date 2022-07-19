@@ -159,17 +159,15 @@ Fisicamente, o banco de dados fica armazenado no arquivo ``/src/forum.db``. Para
 ## Arquitetura do Frontend
 
 
-A seguir, detalhamos a arquitetura do feontend.
+A seguir, detalhamos a arquitetura do frontend, que é basicamente uma Single Page Application (SPA), implementada em React.
 
-No frontend, a arquitetura corresponde a três integrantes:  fórum, formulário e comentários, descritos com mais detalhes  a seguir.
+Essa arquitetura possui três componentes principais: fórum, formulário e comentários, conforme descrito a seguir.
 
 ### Fórum
 
-O frontend é estruturado a partir de uma interface em React, para exibição de uma página inicial simplificada de um sistema de fórum.
+A página principal do sistema está implementada em [Forum.tsx](https://github.com/aserg-ufmg/esmforum/blob/main/frontend/src/Forum.tsx). Ela é responsável por organizar a estrutura e determinar o fluxo de funcionamento do sistema.
 
-Para construção da página, o arquivo [Forum.tsx](https://github.com/aserg-ufmg/esmforum/blob/main/frontend/src/Forum.tsx) é responsável por organizar a estrutura e determinar o fluxo de funcionamento da página.
-
-Mostramos a seguir como realizamos a conexão com o backend através da chamada da API.
+Mostramos a seguir como realizamos a conexão com o backend através da sua API.
 
 ```
 import { useState, useEffect } from "react"
@@ -195,9 +193,10 @@ useEffect(()=> {
     loadData()
 }, [commentsUrl])
 ```
-Através dos métodos useEffect e useState de uma biblioteca [React](https://reactjs.org/), os comentários são acessados do banco de dados através da chamado do método GET na Url ``/api/comment/``, sendo armazenados em comments para uso na exibição de comentários.
 
-Em Forum.tsx ainda se acessa informações de usuários e define métodos como addComment, deleteComment e updateComment, para transmitir alterações nesses dados para o banco de dados, como ilustrado a seguir pelo método updateComment. 
+Como mostrado nesse código, o método `useEffect` faz uma consulta (`GET`) na API do backend para carregar os comentários.
+
+Em `Forum.tsx`, também são implementados métodos como `addComment`, `deleteComment` e `updateComment`, para enviar alterações nesses dados para o o backend, como ilustrado a seguir pelo método updateComment. 
 
 ```
 const updateComment = (text: string, commentid: number) => {
@@ -220,7 +219,8 @@ const updateComment = (text: string, commentid: number) => {
       })
   };
 ```
-O método atulaiza um comentário a partir de seu commentid através da chamado do método PUT na Url ``/api/comment/commentid``, e atualizando o comentário também nos comentários salvos em comments, mantendo versão mais atual para a exibição os comentários.
+
+O método atualiza um comentário a partir de seu commentid através da chamado do método PUT na Url ``/api/comment/commentid``, e atualizando o comentário também nos comentários salvos em comments, mantendo versão mais atual para a exibição os comentários.
 
 Por fim, ainda estrutura a disposição do formulário para inserção de perguntas e exibição dos comentários na página.
 

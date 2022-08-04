@@ -1,5 +1,24 @@
 import { FormEvent, useState } from "react";
 
+const hasURL = (text: string) => (
+  text.split(" ").filter((word) => word.slice(0,4)==="http").length > 0
+);
+
+function tagURL(text: string) {
+  const listURLs = text.split(" ").filter((word) => word.slice(0,4)==="http")
+  if (listURLs.length>0) {
+    let newtext = text;
+    for (let i = 0; i < listURLs.length; i++) {
+      newtext = newtext.replace(listURLs[i], "<a href=\""+listURLs[i]+"\">"+listURLs[i]+"</a>")
+    }
+    return newtext
+  } else {
+    return text
+  }
+}
+
+const searchURL = (text: string) => (tagURL(text));
+
 const Form = ({
   handleSubmit = (text: string, parentid: number) => {},
   submitLabel = "",
@@ -20,7 +39,13 @@ const Form = ({
       <textarea
         className="comment-form-textarea"
         value={text}
-        onChange={(e) => setText(e.target.value)}
+        onChange={(e) => {
+          if(hasURL(e.target.value)){
+            console.log("URL not allowed")
+          }else {
+            setText(e.target.value)
+          }
+        }}
       />
       <button className="comment-form-button comment-form-left" disabled={isTextareaDisabled}>
         {submitLabel}
@@ -39,3 +64,7 @@ const Form = ({
 }
 
 export default Form;
+export const URL = {
+  hasURL,
+  searchURL
+}

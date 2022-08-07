@@ -24,7 +24,7 @@ it('Checar presensa URL', () => {
 })
 ```
 
-Já a segunda função searchURL, utilizada durante o teste [forth_test.spec.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/tests/forth_test.spec.ts) do sistema, busca pela presença de URLs na mensagem e as insere em uma tag html ''<a href="URL">URL</a>''. A implementação da função e seu teste são ilustrados a seguir:
+Já a segunda função searchURL, utilizada durante o teste [forth_test.spec.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/tests/forth_test.spec.ts) do sistema, busca pela presença de URLs na mensagem e as insere em uma tag html ```<a href="URL">URL</a>```. A implementação da função e seu teste são ilustrados a seguir:
 
 ```
 function tagURL(text: string) {

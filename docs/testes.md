@@ -1,6 +1,6 @@
 ## ESM Fórum
 
-## Testes
+## Testes de Software
 
 ### Testes de Unidade
 
@@ -52,3 +52,50 @@ it('Checar alteração URL', () => {
 ```
 
 ### Testes de Integração
+
+Os testes de integração foram direcionados paras as funções do backend, dessa forma, foram organizados dois testes para inserção de um comentário
+na base de dados em [first_test.spec.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/tests/first_test.spec.ts), e inserção, remoção e listagem comentarios na base de dados em [second_test.spec.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/tests/second_test.spec.ts).
+
+A implementação do primeiro teste, cria uma instância da estrutura Comentário de texto "Primeira Questão", e testa a inserção deste usando [insertComment](https://github.com/aserg-ufmg/esmforum/blob/main/src/models/comment.ts) em uma base de dados test.bd, criada para o teste e apagada após a execução do teste, assim como ilustrado a seguir:
+
+```
+import { commentModel } from '../models/comment'
+
+it('inserir comentario "Primeira Questão"', async () => {
+  const comment = { userid: 3, text: 'Primeira Questão', parentid: 0, commentid: 0, createdAt: new Date() }
+  const out = await commentModel.insertComment(comment, 0, './src/tests/test1.db')
+  expect(out.text).toMatch('Primeira Questão')
+})
+
+afterAll(async () => {
+  await del('./src/tests/test1.db')
+})
+```
+
+Já em second_test.spec.ts, testa-se a inserção, insertComment, remoção, deleteComment, e listagem, listAllComments(veja implementação dessas funções em [models/comments.ts](https://github.com/aserg-ufmg/esmforum/blob/main/src/models/comment.ts)), dos comentarios "Primeira Questão", "Segunda Questão" e "Terceira Questão" em uma base de dados test1.bd, criada para execução do deste e apagada ao término deste, como ilustrado a seguir:
+
+```
+import { commentModel } from '../models/comment'
+
+it('inserir, remover e listar comentarios "Primeira Questão", "Segunda Questão" e "Terceira Questão"', async () => {
+  const comment = { userid: 3, text: 'Primeira Questão', parentid: 0, commentid: 0, createdAt: new Date() }
+  await commentModel.insertComment(comment, 0, './src/tests/test.db')
+
+  const comment2 = { userid: 3, text: 'Segunda Questão', parentid: 0, commentid: 0, createdAt: new Date() }
+  const out = await commentModel.insertComment(comment2, 0, './src/tests/test.db')
+
+  const comment3 = { userid: 3, text: 'Terceira Questão', parentid: 0, commentid: 0, createdAt: new Date() }
+  await commentModel.insertComment(comment3, 0, './src/tests/test.db')
+
+  await commentModel.deleteComment(out.commentid, './src/tests/test.db')
+
+  const out1 = await commentModel.listAllComments('./src/tests/test.db')
+
+  expect(out1[0].text).toMatch('Primeira Questão')
+  expect(out1[1].text).toMatch('Terceira Questão')
+})
+
+afterAll(async () => {
+  await del('./src/tests/test.db')
+})
+```

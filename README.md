@@ -19,6 +19,7 @@ O sistema é um fórum simples de perguntas e respostas, conforme ilustrado a se
 * [Instalação e Execução](https://github.com/aserg-ufmg/esmforum/blob/main/docs/install-info.md)
 * [Histórias de Usuários](https://github.com/aserg-ufmg/esmforum/blob/main/docs/historias-usuarios.md)
 * [Arquitetura](https://github.com/aserg-ufmg/esmforum/blob/main/docs/arquitetura.md)
+* [Testes de Software](https://github.com/aserg-ufmg/esmforum/blob/main/docs/testes.md)
 
 <!----
 ## Como Contribuir?

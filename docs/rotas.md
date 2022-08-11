@@ -63,7 +63,7 @@ se certifique que o backend está rodando, conforme explicado
   
    `GET  localhost:3000/api/comment`
   
-  * Para deletar uma pergunta ou resposta, use:
+* Para deletar uma pergunta ou resposta, use:
 
    `POST localhost:3000/api/comment/xx`
   

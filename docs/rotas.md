@@ -56,7 +56,8 @@ se certifique que o backend está rodando, conforme explicado
   }
   ```
   
-  Onde xx é o `commentid` da pergunta postada antes (o valor de `commenti` é gerado automaticamente pelo sistema).
+  Onde xx é o `commentid` da pergunta postada antes. Quando criamos uma pergunta, o seu `commentid` é 
+  gerado automaticamente pelo sistema.
   
   Se quiser conferir a nova lista de perguntas e respostas, use de novo:
   

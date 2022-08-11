@@ -43,30 +43,30 @@ se certifique que o backend está rodando, conforme explicado
   
 #### Para postar uma resposta para a pergunta anterior: ####
   
-  `POST localhost:3000/api/comment`
+`POST localhost:3000/api/comment`
   
-  e use o seguinte "Body": 
+e use o seguinte "Body": 
 
-  ```
+```
   {
     "parentid": xx,  
     "userid": 3,
     "text": "2 + 2 = 4",
     "createdAt": "2022-08-10T20:44:29.438Z"
   }
-  ```
+```
   
-   onde xx é o `commentid` da pergunta postada antes. Quando criamos uma pergunta, o seu `commentid` é 
-   gerado automaticamente pelo sistema.
+onde xx é o `commentid` da pergunta postada antes. Quando criamos uma pergunta, o seu `commentid` é 
+gerado automaticamente pelo sistema.
   
-   Se quiser conferir a nova lista de perguntas e respostas, use de novo:
+Se quiser conferir a nova lista de perguntas e respostas, use de novo:
   
-   `GET  localhost:3000/api/comment`
+`GET  localhost:3000/api/comment`
   
   
 #### Para deletar uma pergunta ou resposta: ####
 
-   `POST localhost:3000/api/comment/xx`
+`DEL localhost:3000/api/comment/xx`
   
-    onde xx é o `commentid` da pergunta que será deletada. Se ela possuir respostas, elas serão deletadas em cascata.
+onde xx é o `commentid` da pergunta que será deletada. Se ela possuir respostas, elas serão deletadas em cascata.
   

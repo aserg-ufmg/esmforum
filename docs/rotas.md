@@ -64,7 +64,7 @@ se certifique que o backend está rodando, conforme explicado
    `GET  localhost:3000/api/comment`
   
   
-#### Para eletar uma pergunta ou resposta, use: ####
+#### Para deletar uma pergunta ou resposta: ####
 
    `POST localhost:3000/api/comment/xx`
   

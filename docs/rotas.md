@@ -13,11 +13,11 @@ Qualquer que seja a ferramenta que usar, tente acessar as seguintes rotas (mas a
 se certifique que o backend está rodando, conforme explicado 
 [aqui](https://github.com/aserg-ufmg/esmforum/blob/main/docs/install-info.md)):
 
-**Lista de usuários castrados no sistema**
+* Lista de usuários castrados no sistema
 
-GET localhost:3000/api/user
+  GET localhost:3000/api/user
 
-**Dados do usuário com ID = 1**
+* Dados do usuário com ID = 1
 
 GET localhost:3000/api/user/1
 

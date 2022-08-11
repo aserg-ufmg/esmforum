@@ -78,7 +78,7 @@ dados devem ser informados em um "Body" como o seguinte:
   "createdAt": "2022-08-10T20:44:29.438Z"
 }
 ```
-  
+
 ##### Para deletar uma pergunta ou resposta: #####
 
 `DEL localhost:3000/api/comment/xx`

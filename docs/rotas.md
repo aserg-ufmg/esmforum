@@ -15,7 +15,7 @@ se certifique que o backend está rodando, conforme explicado
 
 * Lista de usuários castrados no sistema
 
-  GET localhost:3000/api/user
+  `GET localhost:3000/api/user`
 
 * Dados do usuário com ID = 1
 
@@ -23,7 +23,7 @@ se certifique que o backend está rodando, conforme explicado
 
 * Lista atual de perguntas e respostas: 
 
-  c
+  GET  localhost:3000/api/comment
 
 * Para postar uma pergunta:
  
@@ -42,11 +42,11 @@ se certifique que o backend está rodando, conforme explicado
   }
   ```
   
-* Para postar uma resposta:
+* Para postar uma resposta para a pergunta anterior:
   
   POST localhost:3000/api/comment
   
-  com o seguinte "Body": 
+  e use o seguinte "Body": 
 
   ```
   {
@@ -58,7 +58,7 @@ se certifique que o backend está rodando, conforme explicado
   }
   ```
   
-  Se quiser conferir a lista completa de perguntas e respostas, use de novo:
+  Se quiser conferir a nova lista de perguntas e respostas, use de novo:
   
-  GET  localhost:3000/api/comment
+  `GET  localhost:3000/api/comment`
   

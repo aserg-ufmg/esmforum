@@ -23,7 +23,7 @@ se certifique que o backend está rodando, conforme explicado
 
 * Lista atual de perguntas e respostas: 
 
-  GET  localhost:3000/api/comment
+  c
 
 * Para postar uma pergunta:
  
@@ -31,6 +31,7 @@ se certifique que o backend está rodando, conforme explicado
   
   Como precisamos enviar dados para a API, vá na aba "Body" da ferramenta de testes e informe 
   o seguinte documento JSON:
+  
   ```
   {
     "commentid": 1000,
@@ -46,7 +47,8 @@ se certifique que o backend está rodando, conforme explicado
   POST localhost:3000/api/comment
   
   com o seguinte "Body": 
-  
+
+  ```
   {
     "commentid": 1001,
     "parentid": 1000,
@@ -55,4 +57,8 @@ se certifique que o backend está rodando, conforme explicado
     "createdAt": "2022-08-10T20:44:29.438Z"
   }
   ```
+  
+  Se quiser conferir a lista completa de perguntas e respostas, use de novo:
+  
+  GET  localhost:3000/api/comment
   

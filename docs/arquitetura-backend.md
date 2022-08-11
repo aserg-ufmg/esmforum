@@ -1,8 +1,8 @@
 ## ESM Fórum
 
-## Arquitetura
+## Arquitetura do Backend
 
-Na próxima figura, mostramos um diagrama em alto nível da arquitetura do sistema e das principais
+Primeiro, mostramos um diagrama em alto nível da arquitetura do sistema e das principais
 tecnologias usadas na sua implementação:
 
 ```mermaid
@@ -11,9 +11,7 @@ tecnologias usadas na sua implementação:
         BACKEND["BACKEND \n (TypeScript)"] <--> DATABASE["DATABASE \n (SQLite)"];
 ```
 
-## Arquitetura do Backend
-
-Agora, mostramos com mais detalhes a arquitetura do backend.
+Agora, mostramos com mais detalhes a **arquitetura do backend**.
 
 ```mermaid
     flowchart LR

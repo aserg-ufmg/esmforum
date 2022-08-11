@@ -21,16 +21,23 @@ se certifique que o backend está rodando, conforme explicado
 
   GET localhost:3000/api/user/1
 
-* Lista de perguntas e respectivas respostas: 
+* Lista atual de perguntas e respostas: 
 
   GET  localhost:3000/api/comment
 
-
-POST localhost:3000/api/comment
-{
+* Para postar uma pergunta:
+ 
+  POST localhost:3000/api/comment
+  
+  Como agora precisamos enviar dados para a API, vá na aba "Body" da ferramenta de testes e informe 
+  o seguinte documento JSON, com os dados da pergunta que será postada
+  
+  ```
+  {
     "commentid": 128,
     "parentid": 0,
     "userid": 3,
     "text": "Quanto é 2 * 3",
     "createdAt": "2022-08-10T20:44:29.438Z"
   }
+  ```

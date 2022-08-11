@@ -15,24 +15,24 @@ se certifique que o backend está rodando, conforme explicado
 
 ##### Lista de usuários castrados no sistema: #####
 
-  `GET localhost:3000/api/user`
+`GET localhost:3000/api/user`
   
-#### Dados do usuário com ID = 1: ####
+##### Dados do usuário com ID = 1: #####
 
-  `GET localhost:3000/api/user/1`
+ `GET localhost:3000/api/user/1`
 
-#### Lista atual de perguntas e respostas: ####
+##### Lista atual de perguntas e respostas: #####
 
-  `GET  localhost:3000/api/comment`
+`GET  localhost:3000/api/comment`
 
-#### Para postar uma pergunta: ####
+##### Para postar uma pergunta: #####
  
-  `POST localhost:3000/api/comment`
+`POST localhost:3000/api/comment`
   
-  Como precisamos enviar dados para a API, vá na aba "Body" da ferramenta de testes e informe 
-  o seguinte documento JSON:
+Como precisamos enviar dados para a API, vá na aba "Body" da ferramenta de testes e informe 
+o seguinte documento JSON:
   
-  ```
+ ```
   {
     "parentid": 0,
     "userid": 3,
@@ -41,7 +41,7 @@ se certifique que o backend está rodando, conforme explicado
   }
   ```
   
-#### Para postar uma resposta para a pergunta anterior: ####
+##### Para postar uma resposta para a pergunta anterior: #####
   
 `POST localhost:3000/api/comment`
   
@@ -64,7 +64,7 @@ Se quiser conferir a nova lista de perguntas e respostas, use de novo:
 `GET  localhost:3000/api/comment`
   
   
-#### Para deletar uma pergunta ou resposta: ####
+##### Para deletar uma pergunta ou resposta: #####
 
 `DEL localhost:3000/api/comment/xx`
   

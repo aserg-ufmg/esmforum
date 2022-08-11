@@ -63,10 +63,23 @@ Se quiser conferir a nova lista de perguntas e respostas, use de novo:
   
 `GET  localhost:3000/api/comment`
   
+##### Para atualizar os dados de perguntas e respostas: #####
+
+`PUT localhost:3000/api/comment/xx`
+
+onde xx é o `commentid` da pergunta que será atualizada e seus novos
+dados devem ser informados em um "Body" como o seguinte:
+
+{ 
+  "parentid": 0,
+  "userid": 3,
+  "text": "Quanto é 20 + 20?",
+  "createdAt": "2022-08-10T20:44:29.438Z"
+}
+
   
 ##### Para deletar uma pergunta ou resposta: #####
 
 `DEL localhost:3000/api/comment/xx`
   
 onde xx é o `commentid` da pergunta que será deletada. 
-  

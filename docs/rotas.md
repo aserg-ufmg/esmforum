@@ -68,5 +68,5 @@ Se quiser conferir a nova lista de perguntas e respostas, use de novo:
 
 `DEL localhost:3000/api/comment/xx`
   
-onde xx é o `commentid` da pergunta que será deletada. Se ela possuir respostas, elas serão deletadas em cascata.
+onde xx é o `commentid` da pergunta que será deletada. 
   

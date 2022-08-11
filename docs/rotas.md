@@ -49,12 +49,14 @@ se certifique que o backend está rodando, conforme explicado
 
   ```
   {
-    "parentid": xx,  // xx é o commentId gerado para a pergunta postada antes
+    "parentid": xx,  
     "userid": 3,
     "text": "2 + 2 = 4",
     "createdAt": "2022-08-10T20:44:29.438Z"
   }
   ```
+  
+  Onde xx é o `commentid` da pergunta postada antes (o valor de `commenti` é gerado automaticamente pelo sistema).
   
   Se quiser conferir a nova lista de perguntas e respostas, use de novo:
   

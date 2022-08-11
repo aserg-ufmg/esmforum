@@ -5,21 +5,23 @@
 Para testar as rotas implementadas no backend, pode-se usar um sistema como o
 [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client), 
 que é um plugin para o VS Code que permite submeter facilmente requisições para uma
-API REST e ver os resultados retornados. Outra opção de sistema, também muito usado,
-é o [Postman](https://www.postman.com/).
+API REST e ver os resultados retornados. 
 
-Qualquer que seja o sistema que usar (Thunder, Postman, etc), tente acessar as
-seguintes rotas:
+Outra opção de sistema, também muito usado, é o [Postman](https://www.postman.com/).
 
-### Lista completa de usuários castrados no ESM Fórum
+Qualquer que seja o sistema de teste de APIS que usar, tente acessar as seguintes rotas (mas antes
+se certifique que o backend está rodando, conforme explicamos 
+antes [aqui](https://github.com/aserg-ufmg/esmforum/blob/main/docs/install-info.md)):
+
+#### Lista completa de usuários castrados no ESM Fórum
 
 GET localhost:3000/api/user
 
-### Dados do usuário com ID = 1
+#### Dados do usuário com ID = 1
 
 GET localhost:3000/api/user/1
 
-### Lista completa de comentários
+#### Lista completa de comentários
 
 GET  localhost:3000/api/comment
 

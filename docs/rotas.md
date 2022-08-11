@@ -29,15 +29,30 @@ se certifique que o backend está rodando, conforme explicado
  
   POST localhost:3000/api/comment
   
-  Como agora precisamos enviar dados para a API, vá na aba "Body" da ferramenta de testes e informe 
-  o seguinte documento JSON, com os dados da pergunta que será postada
-  
+  Como precisamos enviar dados para a API, vá na aba "Body" da ferramenta de testes e informe 
+  o seguinte documento JSON:
   ```
   {
     "commentid": 1000,
     "parentid": 0,
     "userid": 3,
-    "text": "Quanto é 2 ++2?",
+    "text": "Quanto é 2 + 2?",
     "createdAt": "2022-08-10T20:44:29.438Z"
   }
   ```
+  
+* Para postar uma resposta:
+  
+  POST localhost:3000/api/comment
+  
+  com o seguinte "Body": 
+  
+  {
+    "commentid": 1001,
+    "parentid": 1000,
+    "userid": 3,
+    "text": "2 + 2 = 4",
+    "createdAt": "2022-08-10T20:44:29.438Z"
+  }
+  ```
+  

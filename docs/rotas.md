@@ -19,15 +19,15 @@ se certifique que o backend está rodando, conforme explicado
 
 * Dados do usuário com ID = 1
 
-  GET localhost:3000/api/user/1
+  `GET localhost:3000/api/user/1`
 
 * Lista atual de perguntas e respostas: 
 
-  GET  localhost:3000/api/comment
+  `GET  localhost:3000/api/comment`
 
 * Para postar uma pergunta:
  
-  POST localhost:3000/api/comment
+  `POST localhost:3000/api/comment`
   
   Como precisamos enviar dados para a API, vá na aba "Body" da ferramenta de testes e informe 
   o seguinte documento JSON:
@@ -44,7 +44,7 @@ se certifique que o backend está rodando, conforme explicado
   
 * Para postar uma resposta para a pergunta anterior:
   
-  POST localhost:3000/api/comment
+  `POST localhost:3000/api/comment`
   
   e use o seguinte "Body": 
 

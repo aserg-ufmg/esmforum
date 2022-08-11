@@ -13,19 +13,19 @@ Qualquer que seja a ferramenta que usar, tente acessar as seguintes rotas (mas a
 se certifique que o backend está rodando, conforme explicado 
 [aqui](https://github.com/aserg-ufmg/esmforum/blob/main/docs/install-info.md)):
 
-* Lista de usuários castrados no sistema
+#### Lista de usuários castrados no sistema: ####
 
   `GET localhost:3000/api/user`
-
-* Dados do usuário com ID = 1
+  
+#### Dados do usuário com ID = 1: ####
 
   `GET localhost:3000/api/user/1`
 
-* Lista atual de perguntas e respostas: 
+#### Lista atual de perguntas e respostas: ####
 
   `GET  localhost:3000/api/comment`
 
-* Para postar uma pergunta:
+#### Para postar uma pergunta: ####
  
   `POST localhost:3000/api/comment`
   
@@ -41,7 +41,7 @@ se certifique que o backend está rodando, conforme explicado
   }
   ```
   
-* Para postar uma resposta para a pergunta anterior:
+#### Para postar uma resposta para a pergunta anterior: ####
   
   `POST localhost:3000/api/comment`
   
@@ -63,7 +63,8 @@ se certifique que o backend está rodando, conforme explicado
   
    `GET  localhost:3000/api/comment`
   
-* Para deletar uma pergunta ou resposta, use:
+  
+#### Para eletar uma pergunta ou resposta, use: ####
 
    `POST localhost:3000/api/comment/xx`
   

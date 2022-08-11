@@ -34,7 +34,6 @@ se certifique que o backend está rodando, conforme explicado
   
   ```
   {
-    "commentid": 1000,
     "parentid": 0,
     "userid": 3,
     "text": "Quanto é 2 + 2?",
@@ -50,8 +49,7 @@ se certifique que o backend está rodando, conforme explicado
 
   ```
   {
-    "commentid": 1001,
-    "parentid": 1000,
+    "parentid": xx,  // xx é o commentId gerado para a pergunta postada antes
     "userid": 3,
     "text": "2 + 2 = 4",
     "createdAt": "2022-08-10T20:44:29.438Z"

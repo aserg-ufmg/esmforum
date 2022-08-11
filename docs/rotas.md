@@ -63,3 +63,9 @@ se certifique que o backend está rodando, conforme explicado
   
   `GET  localhost:3000/api/comment`
   
+  * Para deletar uma pergunta ou resposta, use:
+
+  `POST localhost:3000/api/comment/xx`
+  
+   Onde xx é o `commentid` da pergunta que será deletada. Se ela possuir respostas, elas serão deletadas em cascata.
+  

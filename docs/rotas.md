@@ -19,11 +19,11 @@ se certifique que o backend está rodando, conforme explicado
 
 * Dados do usuário com ID = 1
 
-GET localhost:3000/api/user/1
+  GET localhost:3000/api/user/1
 
-#### Lista completa de comentários
+* Lista de perguntas e respectivas respostas: 
 
-GET  localhost:3000/api/comment
+  GET  localhost:3000/api/comment
 
 
 POST localhost:3000/api/comment

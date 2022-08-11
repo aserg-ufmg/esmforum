@@ -41,7 +41,13 @@ Agora, mostramos com mais detalhes a **arquitetura do backend**.
 
 Essa arquitetura é similar a uma [arquitetura MVC](https://engsoftmoderna.info/cap7.html#arquitetura-mvc), conforme estudamos no Capítulo 7 do livro. 
 
-No backend, a arquitetura possui três componentes principais: **controladores**, **modelos** e **banco de dados**. Iremos descrever cada um deles a seguir.
+No backend, a arquitetura possui três componentes principais:
+
+* **Controladores**
+* **Modelos** 
+* **Banco de Dados**. 
+
+Iremos descrever cada um deles a seguir.
 
 ## Controladores 
 

@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules src/server.ts",
-    "test": "jest"
+    "test": "jest",
+    "test:bdd": "cucumber-js ./src/features"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^8.5.2",

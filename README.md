@@ -1,4 +1,4 @@
-# IMPORTANTE
+# Importante
 
 Uma nova versão desse sistema está disponível em:
 

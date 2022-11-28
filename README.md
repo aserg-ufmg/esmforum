@@ -1,3 +1,9 @@
+# IMPORTANTE
+
+Uma nova versão desse sistema está disponível em:
+
+https://github.com/mtov/esmforum
+
 # ESM Forum
 
 O **ESM Forum** é um sistema de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). O objetivo é permitir que os alunos tenham um primeiro contato prático com os conceitos estudados no livro. Ou seja:
